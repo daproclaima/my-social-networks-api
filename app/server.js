@@ -11,7 +11,6 @@ class Server {
     this.app = express()
   }
 
-
   /**
    * middleware
    */
@@ -24,11 +23,15 @@ class Server {
    * routes
    */
   routes () {
-
+    new routes.events.EventsShow(this.app)
+    new routes.events.EventsShowAll(this.app)
+    new routes.events.EventsUpdate(this.app)
+    new routes.events.EventsCreate(this.app)
+    new routes.events.EventsDelete(this.app) 
     this.app.use((req, res) => {
       res.status(404).json({
         'code': 404,
-        'message': 'Not Found'
+        'message': 'Not in API'
       })
     })
   }
