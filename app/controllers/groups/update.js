@@ -1,4 +1,4 @@
-const surveys = require('../../models/factory/mocks/surveys.js')
+const groups = require('../../models/factory/mocks/groups.js')
 
 /**
  * Update
@@ -14,14 +14,14 @@ class Update {
    * middleWare
    */
   middleware () {
-    this.app.put('/surveys/update/:id', (req, res) => {
+    this.app.put('/groups/update/:id', (req, res) => {
       try {
         const { id } = req.params
         const { body } = req
-        let survey = surveys.find(survey => survey.id === id || false)
-        if (survey) {
-          survey = body
-          res.status(200).json(survey)
+        let group = groups.find(group => group.id === id || false)
+        if (group) {
+          group = body
+          res.status(200).json(group)
         } else {
           return {}
         } 

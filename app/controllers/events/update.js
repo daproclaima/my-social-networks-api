@@ -1,4 +1,4 @@
-const events = require('../../models/events.js')
+const events = require('../../models/factory/mocks/events.js')
 
 /**
  * Update

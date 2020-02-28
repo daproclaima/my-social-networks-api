@@ -9,19 +9,32 @@ const SurveysShowAll = require('./surveys/showAll.js')
 const SurveysUpdate = require('./surveys/update.js')
 const SurveysCreate = require('./surveys/create.js')
 const SurveysDelete = require('./surveys/delete.js')
+
+const GroupsShow = require('./groups/show.js')
+const GroupsShowAll = require('./groups/showAll.js')
+const GroupsUpdate = require('./groups/update.js')
+const GroupsCreate = require('./groups/create.js')
+const GroupsDelete = require('./groups/delete.js')
 module.exports = {
   events: {
+    EventsCreate,
     EventsShow,
     EventsShowAll,
     EventsUpdate,
-    EventsCreate,
     EventsDelete
   },
   surveys: {
+    SurveysCreate,
     SurveysShowAll,
     SurveysShow,
     SurveysUpdate,
-    SurveysCreate,
     SurveysDelete
+  },
+  groups: {
+    GroupsCreate,
+    GroupsShowAll,
+    GroupsShow,
+    GroupsUpdate,
+    GroupsDelete
   }
 }

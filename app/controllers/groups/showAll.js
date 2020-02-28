@@ -1,10 +1,10 @@
-const surveys = require('../../models/factory/mocks/surveys.js')
+const groups = require('../../models/factory/mocks/groups.js')
 
 /**
  * Show
  * @Class
  */
-class Show {
+class ShowAll {
   constructor (app) {
     this.app = app
     this.run()
@@ -14,11 +14,9 @@ class Show {
    * middleWare
    */
   middleware () {
-    this.app.get('/surveys/show/:id', (req, res) => {
+    this.app.get('/groups/show/all', (req, res) => {
       try {
-        const { id } = req.params
-
-        res.status(200).json(surveys.find(survey => survey.id === id || {}))
+        res.status(200).json(groups || {})
       } catch (err) {
         res.status(500).json({
           'code': 500,
@@ -36,4 +34,4 @@ class Show {
   }
 }
 
-module.exports = Show
+module.exports = ShowAll
