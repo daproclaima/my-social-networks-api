@@ -1,4 +1,4 @@
-const events = require('../../models/fakeEvents.js')
+const events = require('../../models/events.js')
 
 /**
  * Show
@@ -14,7 +14,7 @@ class Show {
    * middleWare
    */
   middleware () {
-    this.app.get('/event/show/:id', (req, res) => {
+    this.app.get('/events/show/:id', (req, res) => {
       try {
         const { id } = req.params
 

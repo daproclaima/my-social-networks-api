@@ -1,4 +1,4 @@
-const events = require('../../models/fakeEvents.js')
+const events = require('../../models/events.js')
 
 /**
  * Show

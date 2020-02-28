@@ -1,4 +1,4 @@
-const events = require('../../models/events.js')
+const surveys = require('../../models/surveys.js')
 /**
  * Delete
  * @Class
@@ -13,11 +13,11 @@ class Delete {
    * middleWare
    */
   middleware () {
-    this.app.delete('/events/delete/:id', (req, res) => {
+    this.app.delete('/surveys/delete/:id', (req, res) => {
       try {
         const { id } = req.params
-        events.filter(event => event.id === id || false)
-        res.status(200).json(events)
+        surveys.filter(survey => survey.id === id || false)
+        res.status(200).json(surveys)
       } catch (err) {
         res.status(500).json({
           'code': 500,

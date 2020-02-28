@@ -1,9 +1,10 @@
-const events = require('../../models/events.js')
+const surveys = require('../../models/surveys.js')
+
 /**
- * Delete
+ * Show
  * @Class
  */
-class Delete {
+class ShowAll {
   constructor (app) {
     this.app = app
     this.run()
@@ -13,11 +14,9 @@ class Delete {
    * middleWare
    */
   middleware () {
-    this.app.delete('/events/delete/:id', (req, res) => {
+    this.app.get('/surveys/show/all', (req, res) => {
       try {
-        const { id } = req.params
-        events.filter(event => event.id === id || false)
-        res.status(200).json(events)
+        res.status(200).json(surveys || {})
       } catch (err) {
         res.status(500).json({
           'code': 500,
@@ -35,4 +34,4 @@ class Delete {
   }
 }
 
-module.exports = Delete
+module.exports = ShowAll
