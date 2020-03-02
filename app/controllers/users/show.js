@@ -1,9 +1,10 @@
-const events = require('../../models/factory/mocks/events.js')
+const users = require('../../models/factory/mocks/users.js')
+
 /**
- * Delete
+ * Show
  * @Class
  */
-class Delete {
+class Show {
   constructor (app) {
     this.app = app
     this.run()
@@ -13,10 +14,11 @@ class Delete {
    * middleWare
    */
   middleware () {
-    this.app.delete('/events/delete/:id', (req, res) => {
+    this.app.get('/users/show/:id', (req, res) => {
       try {
         const { id } = req.params
-        res.status(200).json(events.find(event => parseInt(event.id) === parseInt(id)) || {})
+
+        res.status(200).json(users.find(user => parseInt(user.id) === parseInt(id)) || {})
       } catch (err) {
         res.status(500).json({
           'code': 500,
@@ -34,4 +36,4 @@ class Delete {
   }
 }
 
-module.exports = Delete
+module.exports = Show

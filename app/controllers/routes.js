@@ -15,6 +15,12 @@ const GroupsShowAll = require('./groups/showAll.js')
 const GroupsUpdate = require('./groups/update.js')
 const GroupsCreate = require('./groups/create.js')
 const GroupsDelete = require('./groups/delete.js')
+
+const UsersShow = require('./Users/show.js')
+const UsersShowAll = require('./Users/showAll.js')
+const UsersUpdate = require('./Users/update.js')
+const UsersCreate = require('./Users/create.js')
+const UsersDelete = require('./Users/delete.js')
 module.exports = {
   events: {
     EventsCreate,
@@ -36,5 +42,12 @@ module.exports = {
     GroupsShow,
     GroupsUpdate,
     GroupsDelete
+  },
+  users: {
+    UsersCreate,
+    UsersShowAll,
+    UsersShow,
+    UsersUpdate,
+    UsersDelete
   }
 }

@@ -16,7 +16,7 @@ class ShowAll {
   middleware () {
     this.app.get('/surveys/show/all', (req, res) => {
       try {
-        res.status(200).json(surveys || {})
+        res.status(200).json(surveys)
       } catch (err) {
         res.status(500).json({
           'code': 500,

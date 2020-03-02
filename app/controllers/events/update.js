@@ -18,7 +18,7 @@ class Update {
       try {
         const { id } = req.params
         const { body } = req
-        let event = events.find(event => event.id === id || false)
+        let event = events.find(event => parseInt(event.id) === parseInt(id) ? event : false)
         if (event) {
           event = body
           res.status(200).json(event)

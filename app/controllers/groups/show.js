@@ -18,7 +18,7 @@ class Show {
       try {
         const { id } = req.params
 
-        res.status(200).json(groups.find(group => group.id === id || {}))
+        res.status(200).json(groups.find(group => parseInt(group.id) === parseInt(id)) || {})
       } catch (err) {
         res.status(500).json({
           'code': 500,

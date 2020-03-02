@@ -18,7 +18,7 @@ class Update {
       try {
         const { id } = req.params
         const { body } = req
-        let survey = surveys.find(survey => survey.id === id || false)
+        let survey = surveys.find(survey => parseInt(survey.id) === parseInt(id) ? survey : false)
         if (survey) {
           survey = body
           res.status(200).json(survey)

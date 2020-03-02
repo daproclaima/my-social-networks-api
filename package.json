@@ -4,10 +4,11 @@
   "description": "## Overview It's CRUDS api for my-social-networks.",
   "main": "index.js",
   "scripts": {
-    "build": "yarn install && eslint ./app/* ./test/* index.js && yarn start",
-    "start": "eslint ./app/* ./test/* index.js && node index.js",
+    "build": "yarn install && eslint ./.eslintrc.js ./app/* ./index.js ./test/*   && yarn start",
+    "start": "eslint ./.eslintrc.js ./app/* ./index.js ./test/*  && node index.js",
+    "dev": "eslint ./.eslintrc.js ./app/* ./index.js ./test/*  && nodemon index.js",
     "test": "mocha",
-    "lint": "eslint ./app/* ./test/* index.js"
+    "lint": "eslint ./.eslintrc.js ./app/* ./index.js ./test/*"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
     "eslint-plugin-promise": "3.8.0",
     "eslint-plugin-standard": "3.1.0",
     "faker": "^4.1.0",
-    "mocha": "5.2.0"
+    "mocha": "5.2.0",
+    "nodemon": "^2.0.2"
   }
 }

@@ -16,8 +16,7 @@ class Delete {
     this.app.delete('/groups/delete/:id', (req, res) => {
       try {
         const { id } = req.params
-        groups.filter(group => group.id === id || false)
-        res.status(200).json(groups)
+        res.status(200).json(groups.find(group => parseInt(group.id) === parseInt(id)) || {})
       } catch (err) {
         res.status(500).json({
           'code': 500,

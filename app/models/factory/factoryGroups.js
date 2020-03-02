@@ -5,7 +5,7 @@ const fs = require('fs')
 let members = []
 let managers = []
 
-let FakeEvents = []
+let fakeGroups = []
 
 function createMembers () {
   let maxAmount = 100
@@ -24,35 +24,37 @@ function createManagers () {
   }
 }
 
-function createFakeEvents () { 
+function createFakeGroups () { 
   for (let i = 0; i < 10; i++) {
     let name = faker.lorem.word()
     let description = faker.lorem.words()
-    let startDate = faker.date.past()
-    let endDate = faker.date.future()
-    let location = `${faker.address.streetAddress()} ${faker.address.city()}`
     let coverPicture = faker.image.image()
-    let privacy = ['private', 'public']
+    let iconePicture = faker.image.imageUrl()
+    let privacy = ['private', 'public', 'sercret']
+    let grantPublish = [true, false]
+    let grantCreateEvent = [true, false]  
+    let events = []
     createMembers()
     createManagers()
 
-    const FakeEvent = {
+    const fakeGroup = {
       'id': i,
       'name': name,
       'description': description,
-      'start_date': startDate,
-      'end_date': endDate,
-      'location': location, 
       'cover_picture': coverPicture,
+      'icone_picture': iconePicture,
       'privacy': privacy[Math.floor(Math.random() * privacy.length)],
+      'grant_publish': grantPublish[Math.floor(Math.random() * grantPublish.length)],
+      'grant_create_event': grantCreateEvent[Math.floor(Math.random() * grantCreateEvent.length)],
       'managers': managers,
-      'members': members
+      'members': members,
+      'events': events
     }
 
-    FakeEvents.push(JSON.stringify(FakeEvent))
+    fakeGroups.push(JSON.stringify(fakeGroup))
   }
 
-  fs.writeFile(`${__dirname}/fakeEvents.js`, FakeEvents, 'utf-8', function (err) {
+  fs.writeFile(`${__dirname}/mocks/groups.js`, `module.exports = [${fakeGroups}]`, 'utf-8', function (err) {
     if (err) {
       console.log('An error occured while writing JSON Object to File.')
       return console.log(err)
@@ -61,4 +63,4 @@ function createFakeEvents () {
   })
 }
 console.log()
-createFakeEvents()
+createFakeGroups()

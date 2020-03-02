@@ -1,11 +1,11 @@
-const events = require('../../models/factory/mocks/events.js')
+const users = require('../../models/factory/mocks/users.js')
 
 /**
- * Show
+ * Create
  * @Class
  */
-class ShowAll {
-  constructor (app) {
+class Create {
+  constructor (app, connect) {
     this.app = app
     this.run()
   }
@@ -14,9 +14,10 @@ class ShowAll {
    * middleWare
    */
   middleware () {
-    this.app.get('/events/show/all', (req, res) => {
+    this.app.post('/users/create', (req, res) => {
       try {
-        res.status(200).json(events)
+        users.push(req.body)
+        res.status(200).json(users)
       } catch (err) {
         res.status(500).json({
           'code': 500,
@@ -34,4 +35,4 @@ class ShowAll {
   }
 }
 
-module.exports = ShowAll
+module.exports = Create
