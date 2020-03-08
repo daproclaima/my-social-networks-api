@@ -2,6 +2,8 @@ const Events = require('./events.js')
 const Groups = require('./groups.js')
 const Surveys = require('./surveys.js')
 const Carpoolings = require('./carpoolings.js')
+const Ticketings = require('./ticketings.js')
+const Tickets = require('./tickets.js')
 
 const UsersShow = require('./Users/show.js')
 const UsersShowAll = require('./Users/showAll.js')
@@ -13,6 +15,8 @@ module.exports = {
   Groups,
   Surveys,
   Carpoolings,
+  Ticketings,
+  Tickets,
   users: {
     UsersCreate,
     UsersShowAll,

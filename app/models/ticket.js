@@ -1,14 +1,13 @@
 const mongoose = require('mongoose')
 
 const Schema = new mongoose.Schema({
+  owner: String,
+  price: String,
   event: String,
-  ticket_collection: String,
-  opening_date: String,
-  closing_date: String,
-  available_ticket_num: String
+  purchase_date: String
 
 }, {
-  collection: 'ticketings',
+  collection: 'tickets',
   minimize: false,
   versionKey: false
 }).set('toJSON', {
