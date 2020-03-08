@@ -1,4 +1,5 @@
-const events = require('../../models/factory/mocks/events.js')
+const events = require('../../models/event.js')
+
 /**
  * Delete
  * @Class
@@ -10,13 +11,13 @@ class Delete {
   }
 
   /**
-   * middleWare
+   * middleware
    */
   middleware () {
     this.app.delete('/events/delete/:id', (req, res) => {
       try {
         const { id } = req.params
-        res.status(200).json(events.find(event => parseInt(event.id) === parseInt(id)) || {})
+        res.status(200).json(events.findOneAndDelete({'_id': id}))
       } catch (err) {
         res.status(500).json({
           'code': 500,

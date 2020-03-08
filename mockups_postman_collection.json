@@ -1,0 +1,612 @@
+{
+	"info": {
+		"_postman_id": "57e6a3cb-44ef-44b2-a146-64e8c2c88eed",
+		"name": "social-network-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/events/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"id\": 4,\n        \"name\": \"Nouvel évènement\",\n        \"description\": \"Nouvel évèvement\",\n        \"start_date\": \"2020-08-12T09:10:03.615Z\",\n        \"end_date\": \"2021-01-26T15:55:15.890Z\",\n        \"location\": \"Versailles, 111 avenue de Paris\",\n        \"cover_picture\": \"http://lorempixel.com/640/480/nightlife\",\n        \"privacy\": \"public\",\n        \"managers\": [\n            \"Sébastien NOBOUR\",\n            \"Clément Morin\",\n            \"Baptiste Martin\",\n            \"Benjamin Moreau\",\n            \"Louna Noel\"\n        ],\n        \"members\": [\n            \"Jade Fleury\",\n            \"Kylian Dufour\",\n            \"Gabriel Meunier\",\n            \"Chloé Guyot\",\n            \"Alexis Philippe\",\n            \"Benjamin Moreau\",\n            \"Pierre Leroy\",\n            \"Justine Blanc\",\n            \"Paul Mercier\",\n            \"Clémence Petit\",\n            \"Alexandre Blanchard\",\n            \"Lena Jacquet\",\n            \"Nicolas Bourgeois\",\n            \"Julie Perez\",\n            \"Lucie Dumont\",\n            \"Clémence Remy\",\n            \"Maxime Dufour\",\n            \"Maxence Deschamps\",\n            \"Maëlys Mercier\",\n            \"Nicolas Pierre\",\n            \"Raphaël Francois\",\n            \"Alicia Fontaine\",\n            \"Romain Garnier\",\n            \"Sarah Carpentier\",\n            \"Camille Bertrand\",\n            \"Alexis Vasseur\",\n            \"Adam Bourgeois\",\n            \"Lina Martin\",\n            \"Mathéo Petit\",\n            \"Maëlle Maillard\",\n            \"Emilie Morin\",\n            \"Manon Gerard\",\n            \"Sacha Hubert\",\n            \"Benjamin Deschamps\",\n            \"Louise Roussel\",\n            \"Maeva Meunier\",\n            \"Valentin Lecomte\",\n            \"Gabriel Moulin\",\n            \"Evan Dumont\",\n            \"Clément Morin\",\n            \"Sacha Leroux\",\n            \"Chloé Fabre\",\n            \"Justine Petit\",\n            \"Louna Noel\",\n            \"Jade Roy\",\n            \"Gabriel Lefevre\",\n            \"Mélissa Noel\",\n            \"Mathis David\",\n            \"Maëlys Bourgeois\",\n            \"Célia Garcia\",\n            \"Justine Bernard\",\n            \"Laura Paul\",\n            \"Mael Julien\",\n            \"Baptiste Martin\",\n            \"Maxence Nicolas\",\n            \"Mathéo Richard\",\n            \"Ethan Royer\",\n            \"Lucie Guyot\",\n            \"Mattéo Guillot\",\n            \"Lena Royer\",\n            \"Lola Paris\",\n            \"Alexandre Breton\",\n            \"Mathilde Perrot\",\n            \"Paul Adam\",\n            \"Lola Rousseau\",\n            \"Sacha Barbier\",\n            \"Quentin Boyer\",\n            \"Maeva Simon\",\n            \"Lucie Muller\",\n            \"Gabriel Arnaud\",\n            \"Sarah Henry\",\n            \"Baptiste Rousseau\",\n            \"Alicia Arnaud\",\n            \"Sébastien NOBOUR\"\n        ]\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/events/create/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"create",
+						""
+					]
+				},
+				"description": "Create a new event into mockups"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/groups/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 4,\n    \"creator\": \"Sébastien NOBOUR\",\n    \"title_question\": \"sunt corrupti et\",\n    \"answers\": [\n        {\n            \"text\": \"id est et\"\n        },\n        {\n            \"text\": \"et aperiam dolore\"\n        },\n        {\n            \"text\": \"ab at harum\"\n        },\n        {\n            \"text\": \"ea quis dolorum\"\n        }\n    ],\n    \"participants\": [\n        \"Pierre Lemoine\",\n        \"Sarah Blanchard\",\n        \"Chloé Menard\",\n        \"Jeanne Boyer\",\n        \"Manon Fournier\",\n        \"Sacha Maillard\",\n        \"Louna Joly\",\n        \"Lou Pons\",\n        \"Zoe Petit\",\n        \"Hugo Guillaume\",\n        \"Sacha Barre\",\n        \"Mael Cousin\",\n        \"Clara Collet\",\n        \"Arthur Martinez\",\n        \"Carla Martin\",\n        \"Noa Leclerc\",\n        \"Clara Lopez\",\n        \"Alicia Nicolas\",\n        \"Louis Caron\",\n        \"Pierre Masson\",\n        \"Rayan Olivier\",\n        \"Baptiste Michel\",\n        \"Axel Giraud\",\n        \"Alexandre Richard\",\n        \"Clémence Fleury\",\n        \"Louis Marie\",\n        \"Ines Fernandez\",\n        \"Ambre Mercier\",\n        \"Quentin Philippe\",\n        \"Alexis Carpentier\",\n        \"Alicia Clement\",\n        \"Paul Robin\",\n        \"Laura Huet\",\n        \"Benjamin Schneider\",\n        \"Clément Roger\",\n        \"Elisa Dupuis\",\n        \"Ambre Paris\",\n        \"Eva Robin\",\n        \"Paul Marchal\",\n        \"Ethan Mercier\",\n        \"Camille Roux\",\n        \"Justine Colin\",\n        \"Maxime Durand\",\n        \"Jeanne Renaud\",\n        \"Sarah Morin\",\n        \"Sacha Joly\",\n        \"Carla Laine\",\n        \"Maxime Paris\",\n        \"Chloé Caron\",\n        \"Victor Deschamps\",\n        \"Benjamin Vincent\",\n        \"Célia Faure\",\n        \"Raphaël Berger\",\n        \"Noa Julien\",\n        \"Sarah Lemoine\",\n        \"Nathan Colin\",\n        \"Jeanne Nicolas\",\n        \"Elisa Poirier\",\n        \"Valentin Guerin\",\n        \"Julien Roux\",\n        \"Océane Leclerc\",\n        \"Océane Charles\",\n        \"Romane Marie\",\n        \"Mélissa Lacroix\",\n        \"Mohamed Prevost\",\n        \"Laura Thomas\",\n        \"Mattéo Collet\",\n        \"Antoine Menard\",\n        \"Maëlle Lefevre\",\n        \"Hugo Aubert\",\n        \"Clémence Dufour\",\n        \"Clémence Garnier\",\n        \"Victor Richard\",\n        \"Jade Durand\",\n        \"Léa Sanchez\",\n        \"Clément Girard\",\n        \"Louise Fontaine\",\n        \"Alexis Roger\",\n        \"Lena Chevalier\",\n        \"Lilou Poirier\",\n        \"Jules Aubert\",\n        \"Paul Robin\",\n        \"Julien Collet\",\n        \"Jules Roussel\",\n        \"Romane Le gall\",\n        \"Noa Guyot\",\n        \"Jade Gauthier\",\n        \"Justine Duval\",\n        \"Noémie Perez\",\n        \"Mélissa Picard\",\n        \"Maxence Thomas\",\n        \"Lina Rousseau\",\n        \"Adam Lambert\",\n        \"Eva Nicolas\",\n        \"Arthur Charles\",\n        \"Clara Girard\",\n        \"Maxence Durand\"\n    ],\n    \"participant_choice\": [\n        {\n            \"participant\": 0,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 1,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 2,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 3,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 4,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 5,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 6,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 7,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 8,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 9,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 10,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 11,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 12,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 13,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 14,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 15,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 16,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 17,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 18,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 19,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 20,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 21,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 22,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 23,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 24,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 25,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 26,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 27,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 28,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 29,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 30,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 31,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 32,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 33,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 34,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 35,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 36,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 37,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 38,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 39,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 40,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 41,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 42,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 43,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 44,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 45,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 46,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 47,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 48,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 49,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 50,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 51,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 52,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 53,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 54,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 55,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 56,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 57,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 58,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 59,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 60,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 61,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 62,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 63,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 64,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 65,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 66,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 67,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 68,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 69,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 70,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 71,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 72,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 73,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 74,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 75,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 76,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 77,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 78,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 79,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 80,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 81,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 82,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 83,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 84,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 85,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 86,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 87,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 88,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 89,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 90,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 91,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 92,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 93,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 94,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 95,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 96,\n            \"choice\": 1\n        }\n    ],\n    \"parent_group\": \"vitae\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/groups/create/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"create",
+						""
+					]
+				},
+				"description": "creates a survey"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/surveys/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 4,\n    \"creator\": \"Sébastien NOBOUR\",\n    \"title_question\": \"sunt corrupti et\",\n    \"answers\": [\n        {\n            \"text\": \"id est et\"\n        },\n        {\n            \"text\": \"et aperiam dolore\"\n        },\n        {\n            \"text\": \"ab at harum\"\n        },\n        {\n            \"text\": \"ea quis dolorum\"\n        }\n    ],\n    \"participants\": [\n        \"Pierre Lemoine\",\n        \"Sarah Blanchard\",\n        \"Chloé Menard\",\n        \"Jeanne Boyer\",\n        \"Manon Fournier\",\n        \"Sacha Maillard\",\n        \"Louna Joly\",\n        \"Lou Pons\",\n        \"Zoe Petit\",\n        \"Hugo Guillaume\",\n        \"Sacha Barre\",\n        \"Mael Cousin\",\n        \"Clara Collet\",\n        \"Arthur Martinez\",\n        \"Carla Martin\",\n        \"Noa Leclerc\",\n        \"Clara Lopez\",\n        \"Alicia Nicolas\",\n        \"Louis Caron\",\n        \"Pierre Masson\",\n        \"Rayan Olivier\",\n        \"Baptiste Michel\",\n        \"Axel Giraud\",\n        \"Alexandre Richard\",\n        \"Clémence Fleury\",\n        \"Louis Marie\",\n        \"Ines Fernandez\",\n        \"Ambre Mercier\",\n        \"Quentin Philippe\",\n        \"Alexis Carpentier\",\n        \"Alicia Clement\",\n        \"Paul Robin\",\n        \"Laura Huet\",\n        \"Benjamin Schneider\",\n        \"Clément Roger\",\n        \"Elisa Dupuis\",\n        \"Ambre Paris\",\n        \"Eva Robin\",\n        \"Paul Marchal\",\n        \"Ethan Mercier\",\n        \"Camille Roux\",\n        \"Justine Colin\",\n        \"Maxime Durand\",\n        \"Jeanne Renaud\",\n        \"Sarah Morin\",\n        \"Sacha Joly\",\n        \"Carla Laine\",\n        \"Maxime Paris\",\n        \"Chloé Caron\",\n        \"Victor Deschamps\",\n        \"Benjamin Vincent\",\n        \"Célia Faure\",\n        \"Raphaël Berger\",\n        \"Noa Julien\",\n        \"Sarah Lemoine\",\n        \"Nathan Colin\",\n        \"Jeanne Nicolas\",\n        \"Elisa Poirier\",\n        \"Valentin Guerin\",\n        \"Julien Roux\",\n        \"Océane Leclerc\",\n        \"Océane Charles\",\n        \"Romane Marie\",\n        \"Mélissa Lacroix\",\n        \"Mohamed Prevost\",\n        \"Laura Thomas\",\n        \"Mattéo Collet\",\n        \"Antoine Menard\",\n        \"Maëlle Lefevre\",\n        \"Hugo Aubert\",\n        \"Clémence Dufour\",\n        \"Clémence Garnier\",\n        \"Victor Richard\",\n        \"Jade Durand\",\n        \"Léa Sanchez\",\n        \"Clément Girard\",\n        \"Louise Fontaine\",\n        \"Alexis Roger\",\n        \"Lena Chevalier\",\n        \"Lilou Poirier\",\n        \"Jules Aubert\",\n        \"Paul Robin\",\n        \"Julien Collet\",\n        \"Jules Roussel\",\n        \"Romane Le gall\",\n        \"Noa Guyot\",\n        \"Jade Gauthier\",\n        \"Justine Duval\",\n        \"Noémie Perez\",\n        \"Mélissa Picard\",\n        \"Maxence Thomas\",\n        \"Lina Rousseau\",\n        \"Adam Lambert\",\n        \"Eva Nicolas\",\n        \"Arthur Charles\",\n        \"Clara Girard\",\n        \"Maxence Durand\"\n    ],\n    \"participant_choice\": [\n        {\n            \"participant\": 0,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 1,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 2,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 3,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 4,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 5,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 6,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 7,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 8,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 9,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 10,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 11,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 12,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 13,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 14,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 15,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 16,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 17,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 18,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 19,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 20,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 21,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 22,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 23,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 24,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 25,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 26,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 27,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 28,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 29,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 30,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 31,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 32,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 33,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 34,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 35,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 36,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 37,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 38,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 39,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 40,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 41,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 42,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 43,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 44,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 45,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 46,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 47,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 48,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 49,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 50,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 51,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 52,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 53,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 54,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 55,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 56,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 57,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 58,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 59,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 60,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 61,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 62,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 63,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 64,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 65,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 66,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 67,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 68,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 69,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 70,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 71,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 72,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 73,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 74,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 75,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 76,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 77,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 78,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 79,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 80,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 81,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 82,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 83,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 84,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 85,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 86,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 87,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 88,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 89,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 90,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 91,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 92,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 93,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 94,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 95,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 96,\n            \"choice\": 1\n        }\n    ],\n    \"parent_group\": \"vitae\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/surveys/create/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"surveys",
+						"create",
+						""
+					]
+				},
+				"description": "creates a survey"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/users/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 4,\n    \"creator\": \"Sébastien NOBOUR\",\n    \"title_question\": \"sunt corrupti et\",\n    \"answers\": [\n        {\n            \"text\": \"id est et\"\n        },\n        {\n            \"text\": \"et aperiam dolore\"\n        },\n        {\n            \"text\": \"ab at harum\"\n        },\n        {\n            \"text\": \"ea quis dolorum\"\n        }\n    ],\n    \"participants\": [\n        \"Pierre Lemoine\",\n        \"Sarah Blanchard\",\n        \"Chloé Menard\",\n        \"Jeanne Boyer\",\n        \"Manon Fournier\",\n        \"Sacha Maillard\",\n        \"Louna Joly\",\n        \"Lou Pons\",\n        \"Zoe Petit\",\n        \"Hugo Guillaume\",\n        \"Sacha Barre\",\n        \"Mael Cousin\",\n        \"Clara Collet\",\n        \"Arthur Martinez\",\n        \"Carla Martin\",\n        \"Noa Leclerc\",\n        \"Clara Lopez\",\n        \"Alicia Nicolas\",\n        \"Louis Caron\",\n        \"Pierre Masson\",\n        \"Rayan Olivier\",\n        \"Baptiste Michel\",\n        \"Axel Giraud\",\n        \"Alexandre Richard\",\n        \"Clémence Fleury\",\n        \"Louis Marie\",\n        \"Ines Fernandez\",\n        \"Ambre Mercier\",\n        \"Quentin Philippe\",\n        \"Alexis Carpentier\",\n        \"Alicia Clement\",\n        \"Paul Robin\",\n        \"Laura Huet\",\n        \"Benjamin Schneider\",\n        \"Clément Roger\",\n        \"Elisa Dupuis\",\n        \"Ambre Paris\",\n        \"Eva Robin\",\n        \"Paul Marchal\",\n        \"Ethan Mercier\",\n        \"Camille Roux\",\n        \"Justine Colin\",\n        \"Maxime Durand\",\n        \"Jeanne Renaud\",\n        \"Sarah Morin\",\n        \"Sacha Joly\",\n        \"Carla Laine\",\n        \"Maxime Paris\",\n        \"Chloé Caron\",\n        \"Victor Deschamps\",\n        \"Benjamin Vincent\",\n        \"Célia Faure\",\n        \"Raphaël Berger\",\n        \"Noa Julien\",\n        \"Sarah Lemoine\",\n        \"Nathan Colin\",\n        \"Jeanne Nicolas\",\n        \"Elisa Poirier\",\n        \"Valentin Guerin\",\n        \"Julien Roux\",\n        \"Océane Leclerc\",\n        \"Océane Charles\",\n        \"Romane Marie\",\n        \"Mélissa Lacroix\",\n        \"Mohamed Prevost\",\n        \"Laura Thomas\",\n        \"Mattéo Collet\",\n        \"Antoine Menard\",\n        \"Maëlle Lefevre\",\n        \"Hugo Aubert\",\n        \"Clémence Dufour\",\n        \"Clémence Garnier\",\n        \"Victor Richard\",\n        \"Jade Durand\",\n        \"Léa Sanchez\",\n        \"Clément Girard\",\n        \"Louise Fontaine\",\n        \"Alexis Roger\",\n        \"Lena Chevalier\",\n        \"Lilou Poirier\",\n        \"Jules Aubert\",\n        \"Paul Robin\",\n        \"Julien Collet\",\n        \"Jules Roussel\",\n        \"Romane Le gall\",\n        \"Noa Guyot\",\n        \"Jade Gauthier\",\n        \"Justine Duval\",\n        \"Noémie Perez\",\n        \"Mélissa Picard\",\n        \"Maxence Thomas\",\n        \"Lina Rousseau\",\n        \"Adam Lambert\",\n        \"Eva Nicolas\",\n        \"Arthur Charles\",\n        \"Clara Girard\",\n        \"Maxence Durand\"\n    ],\n    \"participant_choice\": [\n        {\n            \"participant\": 0,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 1,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 2,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 3,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 4,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 5,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 6,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 7,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 8,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 9,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 10,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 11,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 12,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 13,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 14,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 15,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 16,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 17,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 18,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 19,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 20,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 21,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 22,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 23,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 24,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 25,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 26,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 27,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 28,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 29,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 30,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 31,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 32,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 33,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 34,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 35,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 36,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 37,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 38,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 39,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 40,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 41,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 42,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 43,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 44,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 45,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 46,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 47,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 48,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 49,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 50,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 51,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 52,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 53,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 54,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 55,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 56,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 57,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 58,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 59,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 60,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 61,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 62,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 63,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 64,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 65,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 66,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 67,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 68,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 69,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 70,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 71,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 72,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 73,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 74,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 75,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 76,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 77,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 78,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 79,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 80,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 81,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 82,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 83,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 84,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 85,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 86,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 87,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 88,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 89,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 90,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 91,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 92,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 93,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 94,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 95,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 96,\n            \"choice\": 1\n        }\n    ],\n    \"parent_group\": \"vitae\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/create/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"create",
+						""
+					]
+				},
+				"description": "creates a survey"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/events/show/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/events/show/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"show",
+						"2"
+					]
+				},
+				"description": "get request on event mock ( not persisted in noSQL db)"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/goups/show/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/groups/show/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"show",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/surveys/show/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/surveys/show/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"surveys",
+						"show",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/users/show/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/show/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"show",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/events/show/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/events/show/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"show",
+						"all"
+					]
+				},
+				"description": "Shows all events from mockup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/groups/show/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/groups/show/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"show",
+						"all"
+					]
+				},
+				"description": "Shows all events from mockup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/surveys/show/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/surveys/show/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"surveys",
+						"show",
+						"all"
+					]
+				},
+				"description": "Shows all events from mockup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/users/show/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/users/show/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"show",
+						"all"
+					]
+				},
+				"description": "Shows all events from mockup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/events/update/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"id\": 0,\n        \"name\": \"Changé par moiii\",\n        \"description\": \"Nouvelle description\",\n        \"start_date\": \"2020-08-12T09:10:03.615Z\",\n        \"end_date\": \"2021-01-26T15:55:15.890Z\",\n        \"location\": \"Paris Bonne Nouvelle\",\n        \"cover_picture\": \"http://lorempixel.com/640/480/nightlife\",\n        \"privacy\": \"public\",\n        \"managers\": [\n            \"Sébastien NOBOUR\",\n            \"Clément Morin\",\n            \"Baptiste Martin\",\n            \"Benjamin Moreau\",\n            \"Louna Noel\"\n        ],\n        \"members\": [\n            \"Jade Fleury\",\n            \"Kylian Dufour\",\n            \"Gabriel Meunier\",\n            \"Chloé Guyot\",\n            \"Alexis Philippe\",\n            \"Benjamin Moreau\",\n            \"Pierre Leroy\",\n            \"Justine Blanc\",\n            \"Paul Mercier\",\n            \"Clémence Petit\",\n            \"Alexandre Blanchard\",\n            \"Lena Jacquet\",\n            \"Nicolas Bourgeois\",\n            \"Julie Perez\",\n            \"Lucie Dumont\",\n            \"Clémence Remy\",\n            \"Maxime Dufour\",\n            \"Maxence Deschamps\",\n            \"Maëlys Mercier\",\n            \"Nicolas Pierre\",\n            \"Raphaël Francois\",\n            \"Alicia Fontaine\",\n            \"Romain Garnier\",\n            \"Sarah Carpentier\",\n            \"Camille Bertrand\",\n            \"Alexis Vasseur\",\n            \"Adam Bourgeois\",\n            \"Lina Martin\",\n            \"Mathéo Petit\",\n            \"Maëlle Maillard\",\n            \"Emilie Morin\",\n            \"Manon Gerard\",\n            \"Sacha Hubert\",\n            \"Benjamin Deschamps\",\n            \"Louise Roussel\",\n            \"Maeva Meunier\",\n            \"Valentin Lecomte\",\n            \"Gabriel Moulin\",\n            \"Evan Dumont\",\n            \"Clément Morin\",\n            \"Sacha Leroux\",\n            \"Chloé Fabre\",\n            \"Justine Petit\",\n            \"Louna Noel\",\n            \"Jade Roy\",\n            \"Gabriel Lefevre\",\n            \"Mélissa Noel\",\n            \"Mathis David\",\n            \"Maëlys Bourgeois\",\n            \"Célia Garcia\",\n            \"Justine Bernard\",\n            \"Laura Paul\",\n            \"Mael Julien\",\n            \"Baptiste Martin\",\n            \"Maxence Nicolas\",\n            \"Mathéo Richard\",\n            \"Ethan Royer\",\n            \"Lucie Guyot\",\n            \"Mattéo Guillot\",\n            \"Lena Royer\",\n            \"Lola Paris\",\n            \"Alexandre Breton\",\n            \"Mathilde Perrot\",\n            \"Paul Adam\",\n            \"Lola Rousseau\",\n            \"Sacha Barbier\",\n            \"Quentin Boyer\",\n            \"Maeva Simon\",\n            \"Lucie Muller\",\n            \"Gabriel Arnaud\",\n            \"Sarah Henry\",\n            \"Baptiste Rousseau\",\n            \"Alicia Arnaud\",\n            \"Sébastien NOBOUR\"\n        ]\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/events/update/0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"update",
+						"0"
+					]
+				},
+				"description": "updates one event from mockup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/groups/update/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 0,\n    \"name\": \"Vamos\",\n    \"description\": \"Je l'ai modifié\",\n    \"cover_picture\": \"http://lorempixel.com/640/480/people\",\n    \"icone_picture\": \"http://lorempixel.com/640/480\",\n    \"privacy\": \"public\",\n    \"grant_publish\": false,\n    \"grant_create_event\": true,\n    \"managers\": [\n        \"Jeanne Carpentier\",\n        \"Théo Marchand\"\n    ],\n    \"members\": [\n        \"Adam Bertrand\",\n        \"Chloé Lecomte\",\n        \"Jeanne Roger\",\n        \"Maxence Fournier\",\n        \"Théo Le gall\",\n        \"Maëlys Nicolas\",\n        \"Lola Pierre\",\n        \"Julien Roche\",\n        \"Chloé Thomas\",\n        \"Raphaël Berger\",\n        \"Maëlle Leroy\",\n        \"Maxence Louis\",\n        \"Mattéo Bourgeois\",\n        \"Julien Petit\",\n        \"Zoe Legrand\",\n        \"Léo Renard\",\n        \"Sacha Moulin\",\n        \"Ethan Julien\"\n    ],\n    \"events\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/groups/update/0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"update",
+						"0"
+					]
+				},
+				"description": "updates fake surveys"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/surveys/update/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 0,\n\t\"creator\": \"Juliette Petit\",\n\t\"title_question\": \"deleniti velit modi\",\n\t\"answers\": [ \n\t  {\"text\": \"quia consequatur autem\"},\n\t  {\"text\": \"ex dolore dolorem\"},\n\t  {\"text\": \"consectetur consequatur laudantium\"}, \n\t  {\"text\": \"tempora aspernatur aut\"}\n\t], \n\t\"participants\": [\n\t  \"Camille Bonnet\", \n\t  \"Arthur Vasseur\", \n\t  \"Mael Pons\", \n\t  \"Lina Marchal\", \n\t  \"Pierre Fernandez\", \n\t  \"Justine Da silva\", \n\t  \"Pierre Le roux\", \n\t  \"Alexandre Dumont\", \n\t  \"Lilou Robin\", \n\t  \"Ethan Richard\", \n\t  \"Laura Dufour\", \n\t  \"Baptiste Charles\", \n\t  \"Laura Roger\", \n\t  \"Paul Carre\", \n\t  \"Charlotte Mathieu\", \n\t  \"Louise Jean\", \n\t  \"Pauline Lecomte\", \n\t  \"Laura Gonzalez\", \n\t  \"Clara Andre\", \n\t  \"Emilie Colin\", \n\t  \"Adrien Laurent\", \n\t  \"Gabriel Martinez\", \n\t  \"Mathis Martinez\", \n\t  \"Romain Giraud\", \n\t  \"Hugo Dupuy\", \n\t  \"Lena Berger\", \n\t  \"Alice Boyer\", \n\t  \"Célia Le roux\", \n\t  \"Mathilde Dupuis\", \n\t  \"Mathis Colin\", \n\t  \"Raphaël Morin\", \n\t  \"Mathilde Andre\", \n\t  \"Adrien Robin\", \n\t  \"Alexis Gonzalez\", \n\t  \"Julie Renaud\", \n\t  \"Clément Moreau\", \n\t  \"Justine Dupuy\", \n\t  \"Alexandre Lefebvre\", \n\t  \"Louise Leroux\", \n\t  \"Lucas Denis\", \n\t  \"Axel Gonzalez\", \n\t  \"Célia Le gall\", \n\t  \"Yanis Lopez\", \n\t  \"Thomas Collet\", \n\t  \"Kylian Perrin\", \n\t  \"Mattéo Louis\", \n\t  \"Alice Renaud\", \n\t  \"Nicolas Dupuis\", \n\t  \"Jules Renard\", \n\t  \"Mélissa Roger\", \n\t  \"Antoine Lefebvre\", \n\t  \"Louise Benoit\", \n\t  \"Louis Riviere\", \n\t  \"Gabriel Nguyen\", \n\t  \"Emilie Fournier\", \n\t  \"Nicolas Paris\", \n\t  \"Antoine Gauthier\", \n\t  \"Laura Meunier\", \n\t  \"Léo Pierre\", \n\t  \"Clara Meyer\", \n\t  \"Noa Marchand\", \n\t  \"Pierre Royer\", \n\t  \"Elisa Guerin\", \n\t  \"Chloé Lucas\", \n\t  \"Anaïs Guerin\", \n\t  \"Lisa Roux\", \n\t  \"Lilou Robin\", \n\t  \"Noémie Le roux\", \n\t  \"Adam Bourgeois\", \n\t  \"Louna Francois\", \n\t  \"Louis Meyer\", \n\t  \"Laura Dumas\", \n\t  \"Ethan Clement\", \n\t  \"Juliette Petit\", \n\t  \"Ethan Michel\", \n\t  \"Evan Fabre\", \n\t  \"Louise Aubert\"\n\t], \n\t\"participant_choice\": [\n\t  {\"participant\": 8, \"choice\": 0}\n\t], \n\t\"parent_group\": \"est\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/surveys/update/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"surveys",
+						"update",
+						"1"
+					]
+				},
+				"description": "updates fake surveys"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/users/update/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 0,\n\t\"creator\": \"Juliette Petit\",\n\t\"title_question\": \"deleniti velit modi\",\n\t\"answers\": [ \n\t  {\"text\": \"quia consequatur autem\"},\n\t  {\"text\": \"ex dolore dolorem\"},\n\t  {\"text\": \"consectetur consequatur laudantium\"}, \n\t  {\"text\": \"tempora aspernatur aut\"}\n\t], \n\t\"participants\": [\n\t  \"Camille Bonnet\", \n\t  \"Arthur Vasseur\", \n\t  \"Mael Pons\", \n\t  \"Lina Marchal\", \n\t  \"Pierre Fernandez\", \n\t  \"Justine Da silva\", \n\t  \"Pierre Le roux\", \n\t  \"Alexandre Dumont\", \n\t  \"Lilou Robin\", \n\t  \"Ethan Richard\", \n\t  \"Laura Dufour\", \n\t  \"Baptiste Charles\", \n\t  \"Laura Roger\", \n\t  \"Paul Carre\", \n\t  \"Charlotte Mathieu\", \n\t  \"Louise Jean\", \n\t  \"Pauline Lecomte\", \n\t  \"Laura Gonzalez\", \n\t  \"Clara Andre\", \n\t  \"Emilie Colin\", \n\t  \"Adrien Laurent\", \n\t  \"Gabriel Martinez\", \n\t  \"Mathis Martinez\", \n\t  \"Romain Giraud\", \n\t  \"Hugo Dupuy\", \n\t  \"Lena Berger\", \n\t  \"Alice Boyer\", \n\t  \"Célia Le roux\", \n\t  \"Mathilde Dupuis\", \n\t  \"Mathis Colin\", \n\t  \"Raphaël Morin\", \n\t  \"Mathilde Andre\", \n\t  \"Adrien Robin\", \n\t  \"Alexis Gonzalez\", \n\t  \"Julie Renaud\", \n\t  \"Clément Moreau\", \n\t  \"Justine Dupuy\", \n\t  \"Alexandre Lefebvre\", \n\t  \"Louise Leroux\", \n\t  \"Lucas Denis\", \n\t  \"Axel Gonzalez\", \n\t  \"Célia Le gall\", \n\t  \"Yanis Lopez\", \n\t  \"Thomas Collet\", \n\t  \"Kylian Perrin\", \n\t  \"Mattéo Louis\", \n\t  \"Alice Renaud\", \n\t  \"Nicolas Dupuis\", \n\t  \"Jules Renard\", \n\t  \"Mélissa Roger\", \n\t  \"Antoine Lefebvre\", \n\t  \"Louise Benoit\", \n\t  \"Louis Riviere\", \n\t  \"Gabriel Nguyen\", \n\t  \"Emilie Fournier\", \n\t  \"Nicolas Paris\", \n\t  \"Antoine Gauthier\", \n\t  \"Laura Meunier\", \n\t  \"Léo Pierre\", \n\t  \"Clara Meyer\", \n\t  \"Noa Marchand\", \n\t  \"Pierre Royer\", \n\t  \"Elisa Guerin\", \n\t  \"Chloé Lucas\", \n\t  \"Anaïs Guerin\", \n\t  \"Lisa Roux\", \n\t  \"Lilou Robin\", \n\t  \"Noémie Le roux\", \n\t  \"Adam Bourgeois\", \n\t  \"Louna Francois\", \n\t  \"Louis Meyer\", \n\t  \"Laura Dumas\", \n\t  \"Ethan Clement\", \n\t  \"Juliette Petit\", \n\t  \"Ethan Michel\", \n\t  \"Evan Fabre\", \n\t  \"Louise Aubert\"\n\t], \n\t\"participant_choice\": [\n\t  {\"participant\": 8, \"choice\": 0}\n\t], \n\t\"parent_group\": \"est\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/update/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"update",
+						"1"
+					]
+				},
+				"description": "updates fake surveys"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/events/delete/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/events/delete/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"delete",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/surveys/delete/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/surveys/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"surveys",
+						"delete",
+						"1"
+					]
+				},
+				"description": "Deletes fake survey"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/groups/delete/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/groups/delete/3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"delete",
+						"3"
+					]
+				},
+				"description": "Deletes fake survey"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/users/delete/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/users/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"delete",
+						"1"
+					]
+				},
+				"description": "Deletes fake survey"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

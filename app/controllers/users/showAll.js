@@ -1,4 +1,4 @@
-const users = require('../../models/factory/mocks/users.js')
+const users = require('../../../factory/mocks/users.js')
 
 /**
  * Show
@@ -16,7 +16,7 @@ class ShowAll {
   middleware () {
     this.app.get('/users/show/all', (req, res) => {
       try {
-        res.status(200).json(users.map())
+        res.status(200).json(users)
       } catch (err) {
         res.status(500).json({
           'code': 500,

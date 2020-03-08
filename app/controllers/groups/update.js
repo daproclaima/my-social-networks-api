@@ -1,4 +1,4 @@
-const groups = require('../../models/factory/mocks/groups.js')
+const groups = require('../../../factory/mocks/groups.js')
 
 /**
  * Update

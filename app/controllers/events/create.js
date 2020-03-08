@@ -1,4 +1,4 @@
-const events = require('../../models/factory/mocks/events.js')
+const Event = require('../../models/event.js')
 
 /**
  * Create
@@ -7,6 +7,7 @@ const events = require('../../models/factory/mocks/events.js')
 class Create {
   constructor (app, connect) {
     this.app = app
+    this.EventModel = connect.model('Event', Event)
     this.run()
   }
 
@@ -16,8 +17,16 @@ class Create {
   middleware () {
     this.app.post('/events/create', (req, res) => {
       try {
-        events.push(req.body)
-        res.status(200).json(events)
+        const eventModel = new this.EventModel(req.body)
+        
+        eventModel.save().then(event => {
+          res.status(200).json(event || {})
+        }).catch(err => {
+          res.status(500).json({
+            'code': 500,
+            'message': err
+          })
+        })
       } catch (err) {
         res.status(500).json({
           'code': 500,

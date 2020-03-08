@@ -1,4 +1,4 @@
-const users = require('../../models/factory/mocks/users.js')
+const users = require('../../../factory/mocks/users.js')
 /**
  * Delete
  * @Class

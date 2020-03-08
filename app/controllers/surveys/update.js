@@ -1,4 +1,4 @@
-const surveys = require('../../models/factory/mocks/surveys.js')
+const surveys = require('../../../factory/mocks/surveys.js')
 
 /**
  * Update

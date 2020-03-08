@@ -1,8 +1,4 @@
-const EventsShow = require('./events/show.js')
-const EventsShowAll = require('./events/showAll.js')
-const EventsUpdate = require('./events/update.js')
-const EventsCreate = require('./events/create.js')
-const EventsDelete = require('./events/delete.js')
+const Events = require('./events.js')
 
 const SurveysShow = require('./surveys/show.js')
 const SurveysShowAll = require('./surveys/showAll.js')
@@ -22,13 +18,7 @@ const UsersUpdate = require('./Users/update.js')
 const UsersCreate = require('./Users/create.js')
 const UsersDelete = require('./Users/delete.js')
 module.exports = {
-  events: {
-    EventsCreate,
-    EventsShow,
-    EventsShowAll,
-    EventsUpdate,
-    EventsDelete
-  },
+  Events,
   surveys: {
     SurveysCreate,
     SurveysShowAll,
