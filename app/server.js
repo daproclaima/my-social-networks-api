@@ -59,6 +59,7 @@ class Server {
     new routes.Events(this.app, this.connect)
     new routes.Groups(this.app, this.connect)
     new routes.Surveys(this.app, this.connect) 
+    new routes.Carpoolings(this.app, this.connect)
 
     new routes.users.UsersCreate(this.app)
     new routes.users.UsersShow(this.app)
