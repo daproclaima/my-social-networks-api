@@ -57,18 +57,13 @@ class Server {
    */
   routes () {
     new routes.Events(this.app, this.connect)
+    new routes.Groups(this.app, this.connect)
 
     new routes.surveys.SurveysCreate(this.app)
     new routes.surveys.SurveysShow(this.app)
     new routes.surveys.SurveysShowAll(this.app)
     new routes.surveys.SurveysUpdate(this.app)
     new routes.surveys.SurveysDelete(this.app) 
-
-    new routes.groups.GroupsCreate(this.app)
-    new routes.groups.GroupsShow(this.app)
-    new routes.groups.GroupsShowAll(this.app)
-    new routes.groups.GroupsUpdate(this.app)
-    new routes.groups.GroupsDelete(this.app)
 
     new routes.users.UsersCreate(this.app)
     new routes.users.UsersShow(this.app)

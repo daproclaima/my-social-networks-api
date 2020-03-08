@@ -1,13 +1,13 @@
-const Event = require('../models/event.js')
+const Group = require('../models/group.js')
 
 /**
- * Events
+ * Groups
  * @class
  */
-class Events {
+class Groups {
   constructor (app, connect) {
     this.app = app
-    this.EventModel = connect.model('Event', Event)
+    this.GroupModel = connect.model('Group', Group)
 
     this.create() 
     this.delete()
@@ -20,12 +20,12 @@ class Events {
    * Create
    */
   create () {
-    this.app.post('/events/create', (req, res) => {
+    this.app.post('/groups/create', (req, res) => {
       try {
-        const eventModel = new this.EventModel(req.body)
+        const groupModel = new this.GroupModel(req.body)
         
-        eventModel.save().then(event => {
-          res.status(200).json(event || {})
+        groupModel.save().then(group => {
+          res.status(200).json(group || {})
         }).catch(err => {
           res.status(500).json({
             'code': 500,
@@ -45,11 +45,11 @@ class Events {
    * Delete
    */
   delete () {
-    this.app.delete('/events/delete/:id', (req, res) => {
+    this.app.delete('/groups/delete/:id', (req, res) => {
       try {
-        this.EventModel.findOneAndDelete({_id: req.params.id})
-          .then(event => {
-            res.status(200).json(event || {})
+        this.GroupModel.findOneAndDelete({_id: req.params.id})
+          .then(group => {
+            res.status(200).json(group || {})
           }).catch(err => {
             res.status(500).json({
               'code': 500,
@@ -69,10 +69,10 @@ class Events {
    * Show
    */
   show () {
-    this.app.get('/events/show/:id', (req, res) => {
+    this.app.get('/groups/show/:id', (req, res) => {
       try {
-        this.EventModel.findOne({_id: req.params.id}).then(event => {
-          res.status(200).json(event || {})
+        this.GroupModel.findOne({_id: req.params.id}).then(group => {
+          res.status(200).json(group || {})
         }).catch(err => {
           res.status(500).json({
             'code': 500,
@@ -92,10 +92,10 @@ class Events {
    * Update
    */
   update () {
-    this.app.put('/events/update/:id', (req, res) => {
+    this.app.put('/groups/update/:id', (req, res) => {
       try {
-        this.EventModel.findOneAndUpdate({_id: req.params.id}, {body: req.body}).then(event => {
-          res.status(200).json(event || {})
+        this.GroupModel.findOneAndUpdate({_id: req.params.id}, {body: req.body}).then(group => {
+          res.status(200).json(group || {})
         }).catch(err => {
           res.status(500).json({
             'code': 500,
@@ -115,9 +115,9 @@ class Events {
    * List all
    */
   list () {
-    this.app.get('/events/list', (req, res) => {
+    this.app.get('/groups/list', (req, res) => {
       try {
-        this.EventModel.find({}, function (err, result) {
+        this.GroupModel.find({}, function (err, result) {
           if (err) {
             res.status(500).json({
               'code': 500,
@@ -137,4 +137,4 @@ class Events {
   }
 }
 
-module.exports = Events
+module.exports = Groups
