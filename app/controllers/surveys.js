@@ -1,13 +1,13 @@
-const Event = require('../models/event.js')
+const Survey = require('../models/survey.js')
 
 /**
- * Events
+ * Surveys
  * @class
  */
-class Events {
+class Surveys {
   constructor (app, connect) {
     this.app = app
-    this.EventModel = connect.model('Event', Event)
+    this.SurveyModel = connect.model('Survey', Survey)
 
     this.create() 
     this.delete()
@@ -20,12 +20,12 @@ class Events {
    * Create
    */
   create () {
-    this.app.post('/events/create', (req, res) => {
+    this.app.post('/surveys/create', (req, res) => {
       try {
-        const eventModel = new this.EventModel(req.body)
+        const surveyModel = new this.SurveyModel(req.body)
         
-        eventModel.save().then(event => {
-          res.status(200).json(event || {})
+        surveyModel.save().then(survey => {
+          res.status(200).json(survey || {})
         }).catch(err => {
           res.status(500).json({
             'code': 500,
@@ -45,11 +45,11 @@ class Events {
    * Delete
    */
   delete () {
-    this.app.delete('/events/delete/:id', (req, res) => {
+    this.app.delete('/surveys/delete/:id', (req, res) => {
       try {
-        this.EventModel.findOneAndDelete({_id: req.params.id})
-          .then(event => {
-            res.status(200).json(event || {})
+        this.SurveyModel.findOneAndDelete({_id: req.params.id})
+          .then(survey => {
+            res.status(200).json(survey || {})
           }).catch(err => {
             res.status(500).json({
               'code': 500,
@@ -69,10 +69,10 @@ class Events {
    * Show
    */
   show () {
-    this.app.get('/events/show/:id', (req, res) => {
+    this.app.get('/surveys/show/:id', (req, res) => {
       try {
-        this.EventModel.findOne({_id: req.params.id}).then(event => {
-          res.status(200).json(event || {})
+        this.SurveyModel.findOne({_id: req.params.id}).then(survey => {
+          res.status(200).json(survey || {})
         }).catch(err => {
           res.status(500).json({
             'code': 500,
@@ -92,9 +92,9 @@ class Events {
    * Update
    */
   update () {
-    this.app.put('/events/update/:id', (req, res) => {
+    this.app.put('/surveys/update/:id', (req, res) => {
       try {
-        this.EventModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
+        this.SurveyModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
           if (err) {
             res.status(500).json({
               'code': 500,
@@ -117,9 +117,9 @@ class Events {
    * List all
    */
   list () {
-    this.app.get('/events/list', (req, res) => {
+    this.app.get('/surveys/list', (req, res) => {
       try {
-        this.EventModel.find({}, function (err, result) {
+        this.SurveyModel.find({}, function (err, result) {
           if (err) {
             res.status(500).json({
               'code': 500,
@@ -139,4 +139,4 @@ class Events {
   }
 }
 
-module.exports = Events
+module.exports = Surveys

@@ -94,13 +94,15 @@ class Groups {
   update () {
     this.app.put('/groups/update/:id', (req, res) => {
       try {
-        this.GroupModel.findOneAndUpdate({_id: req.params.id}, {body: req.body}).then(group => {
-          res.status(200).json(group || {})
-        }).catch(err => {
-          res.status(500).json({
-            'code': 500,
-            'message': err
-          })
+        this.GroupModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
+          if (err) {
+            res.status(500).json({
+              'code': 500,
+              'message': err
+            })
+          } else {
+            res.status(200).json(doc || {})
+          }
         })
       } catch (err) {
         res.status(500).json({

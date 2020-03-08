@@ -6,6 +6,7 @@ const Schema = new mongoose.Schema({
   title_question: String,
   answers: String,
   participants: String,
+  participants_choices: String,
   parent_group: String
 }, {
   collection: 'surveys',
