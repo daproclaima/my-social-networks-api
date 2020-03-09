@@ -5,7 +5,7 @@ const Schema = new mongoose.Schema({
   authors: String
 
 }, {
-  collection: 'events',
+  collection: 'conversations',
   minimize: false,
   versionKey: false
 }).set('toJSON', {

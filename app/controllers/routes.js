@@ -6,6 +6,7 @@ const Ticketings = require('./ticketings.js')
 const Tickets = require('./tickets.js')
 const Messages = require('./messages.js')
 const Users = require('./users.js')
+const Conversations = require('./conversations.js')
 
 module.exports = {
   Events,
@@ -15,5 +16,6 @@ module.exports = {
   Ticketings,
   Tickets,
   Messages,
-  Users
+  Users,
+  Conversations
 }
