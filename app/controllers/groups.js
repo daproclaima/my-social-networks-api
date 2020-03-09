@@ -1,6 +1,8 @@
 const Group = require('../models/group.js')
 const validator = require('node-validator')
 const check = require('./payload-validator/groups.js')
+const JWT = require('../jwt.js')
+const jwt = new JWT()
 
 /**
  * Groups
@@ -24,16 +26,23 @@ class Groups {
   create () {
     this.app.post('/groups/create', validator.express(check), (req, res) => {
       try {
-        const groupModel = new this.GroupModel(req.body)
-        
-        groupModel.save().then(group => {
-          res.status(200).json(group || {})
-        }).catch(err => {
-          res.status(500).json({
-            'code': 500,
-            'message': err
+        if (jwt.getToken(req.body.token)) {
+          const groupModel = new this.GroupModel(req.body)
+          
+          groupModel.save().then(group => {
+            res.status(200).json(group || {})
+          }).catch(err => {
+            res.status(500).json({
+              'code': 500,
+              'message': err
+            })
           })
-        })
+        } else {
+          res.status(401).json({
+            'code': 401,
+            'message': 'Access Denied' 
+          })
+        }
       } catch (err) {
         res.status(500).json({
           'code': 500,
@@ -49,15 +58,22 @@ class Groups {
   delete () {
     this.app.delete('/groups/delete/:id', (req, res) => {
       try {
-        this.GroupModel.findOneAndDelete({_id: req.params.id})
-          .then(group => {
-            res.status(200).json(group || {})
-          }).catch(err => {
-            res.status(500).json({
-              'code': 500,
-              'message': err
+        if (jwt.getToken(req.body.token)) {
+          this.GroupModel.findOneAndDelete({_id: req.params.id})
+            .then(group => {
+              res.status(200).json(group || {})
+            }).catch(err => {
+              res.status(500).json({
+                'code': 500,
+                'message': err
+              })
             })
+        } else {
+          res.status(401).json({
+            'code': 401,
+            'message': 'Access Denied' 
           })
+        }
       } catch (err) {
         res.status(500).json({
           'code': 500,
@@ -73,14 +89,21 @@ class Groups {
   show () {
     this.app.get('/groups/show/:id', (req, res) => {
       try {
-        this.GroupModel.findOne({_id: req.params.id}).then(group => {
-          res.status(200).json(group || {})
-        }).catch(err => {
-          res.status(500).json({
-            'code': 500,
-            'message': err
+        if (jwt.getToken(req.body.token)) {
+          this.GroupModel.findOne({_id: req.params.id}).then(group => {
+            res.status(200).json(group || {})
+          }).catch(err => {
+            res.status(500).json({
+              'code': 500,
+              'message': err
+            })
           })
-        })
+        } else {
+          res.status(401).json({
+            'code': 401,
+            'message': 'Access Denied' 
+          })
+        }
       } catch (err) {
         res.status(500).json({
           'code': 500,
@@ -96,16 +119,23 @@ class Groups {
   update () {
     this.app.put('/groups/update/:id', validator.express(check), (req, res) => {
       try {
-        this.GroupModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
-          if (err) {
-            res.status(500).json({
-              'code': 500,
-              'message': err
-            })
-          } else {
-            res.status(200).json(doc || {})
-          }
-        })
+        if (jwt.getToken(req.body.token)) {
+          this.GroupModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
+            if (err) {
+              res.status(500).json({
+                'code': 500,
+                'message': err
+              })
+            } else {
+              res.status(200).json(doc || {})
+            }
+          })
+        } else {
+          res.status(401).json({
+            'code': 401,
+            'message': 'Access Denied' 
+          })
+        }
       } catch (err) {
         res.status(500).json({
           'code': 500,
@@ -121,16 +151,23 @@ class Groups {
   list () {
     this.app.get('/groups/list', (req, res) => {
       try {
-        this.GroupModel.find({}, function (err, result) {
-          if (err) {
-            res.status(500).json({
-              'code': 500,
-              'message': err
-            })
-          } else {
-            res.status(200).json(result)
-          }   
-        })
+        if (jwt.getToken(req.body.token)) {
+          this.GroupModel.find({}, function (err, result) {
+            if (err) {
+              res.status(500).json({
+                'code': 500,
+                'message': err
+              })
+            } else {
+              res.status(200).json(result)
+            }   
+          })
+        } else {
+          res.status(401).json({
+            'code': 401,
+            'message': 'Access Denied' 
+          })
+        }
       } catch (err) {
         res.status(500).json({
           'code': 500,

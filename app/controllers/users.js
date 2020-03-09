@@ -1,6 +1,8 @@
 const User = require('../models/user.js')
 const validator = require('node-validator')
 const check = require('./payload-validator/users.js')
+const JWT = require('../jwt.js')
+const jwt = new JWT()
 
 /**
  * Users
@@ -22,18 +24,25 @@ class Users {
    * Create
    */
   create () {
-    this.app.post('/users/create', validator.express(check), (req, res) => {
+    this.app.post('/users/create', validator.express(check), async (req, res) => {
       try {
-        const userModel = new this.UserModel(req.body)
-        
-        userModel.save().then(result => {
-          res.status(200).json(result || {})
-        }).catch(err => {
-          res.status(500).json({
-            'code': 500,
-            'message': err
+        if (jwt.getToken(req.body.token)) {
+          const userModel = new this.UserModel(req.body)
+          
+          userModel.save().then(result => {
+            res.status(200).json(result || {})
+          }).catch(err => {
+            res.status(500).json({
+              'code': 500,
+              'message': err
+            })
           })
-        })
+        } else {
+          res.status(401).json({
+            'code': 401,
+            'message': 'Access Denied' 
+          })
+        }
       } catch (err) {
         res.status(500).json({
           'code': 500,
@@ -47,17 +56,24 @@ class Users {
    * Delete
    */
   delete () {
-    this.app.delete('/users/delete/:id', (req, res) => {
+    this.app.delete('/users/delete/:id', validator.express(check), async (req, res) => {
       try {
-        this.UserModel.findOneAndDelete({_id: req.params.id})
-          .then(result => {
-            res.status(200).json(result || {})
-          }).catch(err => {
-            res.status(500).json({
-              'code': 500,
-              'message': err
+        if (jwt.getToken(req.body.token)) {
+          this.UserModel.findOneAndDelete({_id: req.params.id})
+            .then(result => {
+              res.status(200).json(result || {})
+            }).catch(err => {
+              res.status(500).json({
+                'code': 500,
+                'message': err
+              })
             })
+        } else {
+          res.status(401).json({
+            'code': 401,
+            'message': 'Access Denied' 
           })
+        }
       } catch (err) {
         res.status(500).json({
           'code': 500,
@@ -71,16 +87,23 @@ class Users {
    * Show
    */
   show () {
-    this.app.get('/users/show/:id', (req, res) => {
+    this.app.get('/users/show/:id', validator.express(check), async (req, res) => {
       try {
-        this.UserModel.findOne({_id: req.params.id}).then(result => {
-          res.status(200).json(result || {})
-        }).catch(err => {
-          res.status(500).json({
-            'code': 500,
-            'message': err
+        if (jwt.getToken(req.body.token)) {
+          this.UserModel.findOne({_id: req.params.id}).then(result => {
+            res.status(200).json(result || {})
+          }).catch(err => {
+            res.status(500).json({
+              'code': 500,
+              'message': err
+            })
           })
-        })
+        } else {
+          res.status(401).json({
+            'code': 401,
+            'message': 'Access Denied' 
+          })
+        }
       } catch (err) {
         res.status(500).json({
           'code': 500,
@@ -94,18 +117,25 @@ class Users {
    * Update
    */
   update () {
-    this.app.put('/users/update/:id', validator.express(check), (req, res) => {
+    this.app.put('/users/update/:id', validator.express(check), async (req, res) => {
       try {
-        this.UserModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
-          if (err) {
-            res.status(500).json({
-              'code': 500,
-              'message': err
-            })
-          } else {
-            res.status(200).json(doc || {})
-          }
-        })
+        if (jwt.getToken(req.body.token)) {
+          this.UserModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
+            if (err) {
+              res.status(500).json({
+                'code': 500,
+                'message': err
+              })
+            } else {
+              res.status(200).json(doc || {})
+            }
+          })
+        } else {
+          res.status(401).json({
+            'code': 401,
+            'message': 'Access Denied' 
+          })
+        }
       } catch (err) {
         res.status(500).json({
           'code': 500,
@@ -119,18 +149,25 @@ class Users {
    * List all
    */
   list () {
-    this.app.get('/users/list', (req, res) => {
+    this.app.get('/users/list', validator.express(check), async (req, res) => {
       try {
-        this.UserModel.find({}, function (err, result) {
-          if (err) {
-            return res.status(500).json({
-              'code': 500,
-              'message': err
-            })
-          } else {
-            res.status(200).json(result)
-          }   
-        })
+        if (jwt.getToken(req.body.token)) {
+          this.UserModel.find({}, function (err, result) {
+            if (err) {
+              return res.status(500).json({
+                'code': 500,
+                'message': err
+              })
+            } else {
+              res.status(200).json(result)
+            }   
+          })
+        } else {
+          res.status(401).json({
+            'code': 401,
+            'message': 'Access Denied' 
+          })
+        }
       } catch (err) {
         res.status(500).json({
           'code': 500,
