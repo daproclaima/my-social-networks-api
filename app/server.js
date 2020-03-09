@@ -62,12 +62,8 @@ class Server {
     new routes.Carpoolings(this.app, this.connect)
     new routes.Ticketings(this.app, this.connect)
     new routes.Tickets(this.app, this.connect)
-
-    new routes.users.UsersCreate(this.app)
-    new routes.users.UsersShow(this.app)
-    new routes.users.UsersShowAll(this.app)
-    new routes.users.UsersUpdate(this.app)
-    new routes.users.UsersDelete(this.app)
+    new routes.Messages(this.app, this.connect)
+    new routes.Users(this.app, this.connect)
 
     this.app.use((req, res) => {
       res.status(404).json({
