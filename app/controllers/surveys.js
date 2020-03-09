@@ -1,4 +1,6 @@
 const Survey = require('../models/survey.js')
+const validator = require('node-validator')
+const check = require('./payload-validator/surveys.js')
 
 /**
  * Surveys
@@ -20,7 +22,7 @@ class Surveys {
    * Create
    */
   create () {
-    this.app.post('/surveys/create', (req, res) => {
+    this.app.post('/surveys/create', validator.express(check), (req, res) => {
       try {
         const surveyModel = new this.SurveyModel(req.body)
         
@@ -92,7 +94,7 @@ class Surveys {
    * Update
    */
   update () {
-    this.app.put('/surveys/update/:id', (req, res) => {
+    this.app.put('/surveys/update/:id', validator.express(check), (req, res) => {
       try {
         this.SurveyModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
           if (err) {

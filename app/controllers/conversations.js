@@ -1,4 +1,6 @@
 const Conversation = require('../models/conversation.js')
+const validator = require('node-validator')
+const check = require('./payload-validator/conversations.js')
 
 /**
  * Conversations
@@ -20,7 +22,7 @@ class Conversations {
    * Create
    */
   create () {
-    this.app.post('/conversations/create', (req, res) => {
+    this.app.post('/conversations/create', validator.express(check), (req, res) => {
       try {
         const oModel = new this.OModel(req.body)
         
@@ -92,7 +94,7 @@ class Conversations {
    * Update
    */
   update () {
-    this.app.put('/conversations/update/:id', (req, res) => {
+    this.app.put('/conversations/update/:id', validator.express(check), (req, res) => {
       try {
         this.OModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
           if (err) {

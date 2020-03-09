@@ -1,0 +1,11 @@
+const _ = require('node-validator')
+
+module.exports = _.isObject()
+  .withOptional('departure_location', _.isString())
+  .withOptional('arrival_location', _.isString())
+  .withOptional('driver', _.isString())
+  .withOptional('seat_numbers', _.isNumber())
+  .withOptional('driver', _.isString())
+  .withOptional('passengers', _.isString())
+  .withOptional('arrival_hour', _.isString())
+  .withOptional('departure_hour', _.isString())

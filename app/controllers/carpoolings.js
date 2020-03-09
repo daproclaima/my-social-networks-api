@@ -1,4 +1,6 @@
 const Carpooling = require('../models/carpooling.js')
+const validator = require('node-validator')
+const check = require('./payload-validator/carpoolings.js')
 
 /**
  * Carpoolings
@@ -20,7 +22,7 @@ class Carpoolings {
    * Create
    */
   create () {
-    this.app.post('/carpoolings/create', (req, res) => {
+    this.app.post('/carpoolings/create', validator.express(check), (req, res) => {
       try {
         const carpModel = new this.CarpModel(req.body)
         
@@ -92,7 +94,7 @@ class Carpoolings {
    * Update
    */
   update () {
-    this.app.put('/carpoolings/update/:id', (req, res) => {
+    this.app.put('/carpoolings/update/:id', validator.express(check), (req, res) => {
       try {
         this.CarpModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
           if (err) {

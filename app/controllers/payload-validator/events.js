@@ -1,0 +1,12 @@
+const _ = require('node-validator')
+
+module.exports = _.isObject()
+  .withOptional('name', _.isString())
+  .withOptional('description', _.isString())
+  .withOptional('start_date', _.isString())
+  .withOptional('end_date', _.isString())
+  .withOptional('location', _.isString())
+  .withOptional('cover_picture', _.isString())
+  .withOptional('privacy', _.isString())
+  .withOptional('managers', _.isString())
+  .withOptional('members', _.isString())

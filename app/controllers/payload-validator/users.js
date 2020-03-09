@@ -1,0 +1,13 @@
+const _ = require('node-validator')
+
+module.exports = _.isObject()
+  .withOptional('avatar', _.isString())
+  .withOptional('first_name', _.isString())
+  .withOptional('last_name', _.isString())
+  .withOptional('email', _.isString())
+  .withOptional('password', _.isString())
+  .withOptional('address', _.isString())
+  .withOptional('city', _.isString())
+  .withOptional('zip_code', _.isString())
+  .withOptional('country', _.isString())
+  .withOptional('groups', _.isString())

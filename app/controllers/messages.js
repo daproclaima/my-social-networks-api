@@ -1,4 +1,6 @@
 const Message = require('../models/message.js')
+const validator = require('node-validator')
+const check = require('./payload-validator/messages.js')
 
 /**
  * Messages
@@ -20,7 +22,7 @@ class Messages {
    * Create
    */
   create () {
-    this.app.post('/messages/create', (req, res) => {
+    this.app.post('/messages/create', validator.express(check), (req, res) => {
       try {
         const msgModel = new this.MsgModel(req.body)
         
@@ -92,7 +94,7 @@ class Messages {
    * Update
    */
   update () {
-    this.app.put('/messages/update/:id', (req, res) => {
+    this.app.put('/messages/update/:id', validator.express(check), (req, res) => {
       try {
         this.MsgModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
           if (err) {

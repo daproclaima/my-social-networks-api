@@ -1,4 +1,6 @@
 const User = require('../models/user.js')
+const validator = require('node-validator')
+const check = require('./payload-validator/users.js')
 
 /**
  * Users
@@ -20,7 +22,7 @@ class Users {
    * Create
    */
   create () {
-    this.app.post('/users/create', (req, res) => {
+    this.app.post('/users/create', validator.express(check), (req, res) => {
       try {
         const userModel = new this.UserModel(req.body)
         
@@ -92,7 +94,7 @@ class Users {
    * Update
    */
   update () {
-    this.app.put('/users/update/:id', (req, res) => {
+    this.app.put('/users/update/:id', validator.express(check), (req, res) => {
       try {
         this.UserModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
           if (err) {

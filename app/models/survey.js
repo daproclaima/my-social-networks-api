@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const Schema = new mongoose.Schema({
 
   creator: String,
-  title_question: String,
+  title: String,
   answers: String,
   participants: String,
   participants_choices: String,

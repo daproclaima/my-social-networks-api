@@ -1,4 +1,6 @@
 const Ticket = require('../models/ticket.js')
+const validator = require('node-validator')
+const check = require('./payload-validator/tickets.js')
 
 /**
  * Tickets
@@ -20,7 +22,7 @@ class Tickets {
    * Create
    */
   create () {
-    this.app.post('/tickets/create', (req, res) => {
+    this.app.post('/tickets/create', validator.express(check), (req, res) => {
       try {
         const tickModel = new this.TickModel(req.body)
         
@@ -92,7 +94,7 @@ class Tickets {
    * Update
    */
   update () {
-    this.app.put('/tickets/update/:id', (req, res) => {
+    this.app.put('/tickets/update/:id', validator.express(check), (req, res) => {
       try {
         this.TickModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
           if (err) {

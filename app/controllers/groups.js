@@ -1,4 +1,6 @@
 const Group = require('../models/group.js')
+const validator = require('node-validator')
+const check = require('./payload-validator/groups.js')
 
 /**
  * Groups
@@ -20,7 +22,7 @@ class Groups {
    * Create
    */
   create () {
-    this.app.post('/groups/create', (req, res) => {
+    this.app.post('/groups/create', validator.express(check), (req, res) => {
       try {
         const groupModel = new this.GroupModel(req.body)
         
@@ -92,7 +94,7 @@ class Groups {
    * Update
    */
   update () {
-    this.app.put('/groups/update/:id', (req, res) => {
+    this.app.put('/groups/update/:id', validator.express(check), (req, res) => {
       try {
         this.GroupModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
           if (err) {
