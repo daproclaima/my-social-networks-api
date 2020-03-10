@@ -24,7 +24,7 @@ class Messages {
    * Create
    */
   create () {
-    this.app.post('/messages/create', validator.express(check), (req, res) => {
+    this.app.post('/messages/create', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           const msgModel = new this.MsgModel(req.body)
@@ -56,7 +56,7 @@ class Messages {
    * Delete
    */
   delete () {
-    this.app.delete('/messages/delete/:id', (req, res) => {
+    this.app.delete('/messages/delete/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.MsgModel.findOneAndDelete({_id: req.params.id})
@@ -87,7 +87,7 @@ class Messages {
    * Show
    */
   show () {
-    this.app.get('/messages/show/:id', (req, res) => {
+    this.app.get('/messages/show/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.MsgModel.findOne({_id: req.params.id}).then(result => {
@@ -117,7 +117,7 @@ class Messages {
    * Update
    */
   update () {
-    this.app.put('/messages/update/:id', validator.express(check), (req, res) => {
+    this.app.put('/messages/update/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.MsgModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
@@ -149,7 +149,7 @@ class Messages {
    * List all
    */
   list () {
-    this.app.get('/messages/list', (req, res) => {
+    this.app.get('/messages/list', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.MsgModel.find({}, function (err, result) {

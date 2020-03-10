@@ -24,7 +24,7 @@ class Events {
    * Create
    */
   create () {
-    this.app.post('/events/create', validator.express(check), (req, res) => {
+    this.app.post('/events/create', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           const eventModel = new this.EventModel(req.body)
@@ -56,7 +56,7 @@ class Events {
    * Delete
    */
   delete () {
-    this.app.delete('/events/delete/:id', (req, res) => {
+    this.app.delete('/events/delete/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.EventModel.findOneAndDelete({_id: req.params.id})
@@ -87,7 +87,7 @@ class Events {
    * Show
    */
   show () {
-    this.app.get('/events/show/:id', (req, res) => {
+    this.app.get('/events/show/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.EventModel.findOne({_id: req.params.id}).then(event => {
@@ -117,7 +117,7 @@ class Events {
    * Update
    */
   update () {
-    this.app.put('/events/update/:id', validator.express(check), (req, res) => {
+    this.app.put('/events/update/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.EventModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
@@ -149,7 +149,7 @@ class Events {
    * List all
    */
   list () {
-    this.app.get('/events/list', (req, res) => {
+    this.app.get('/events/list', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.EventModel.find({}, function (err, result) {

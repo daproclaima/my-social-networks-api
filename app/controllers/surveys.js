@@ -24,7 +24,7 @@ class Surveys {
    * Create
    */
   create () {
-    this.app.post('/surveys/create', validator.express(check), (req, res) => {
+    this.app.post('/surveys/create', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           const surveyModel = new this.SurveyModel(req.body)
@@ -56,7 +56,7 @@ class Surveys {
    * Delete
    */
   delete () {
-    this.app.delete('/surveys/delete/:id', (req, res) => {
+    this.app.delete('/surveys/delete/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.SurveyModel.findOneAndDelete({_id: req.params.id})
@@ -87,7 +87,7 @@ class Surveys {
    * Show
    */
   show () {
-    this.app.get('/surveys/show/:id', (req, res) => {
+    this.app.get('/surveys/show/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.SurveyModel.findOne({_id: req.params.id}).then(survey => {
@@ -117,7 +117,7 @@ class Surveys {
    * Update
    */
   update () {
-    this.app.put('/surveys/update/:id', validator.express(check), (req, res) => {
+    this.app.put('/surveys/update/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.SurveyModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
@@ -149,7 +149,7 @@ class Surveys {
    * List all
    */
   list () {
-    this.app.get('/surveys/list', (req, res) => {
+    this.app.get('/surveys/list', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.SurveyModel.find({}, function (err, result) {

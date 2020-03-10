@@ -24,7 +24,7 @@ class Groups {
    * Create
    */
   create () {
-    this.app.post('/groups/create', validator.express(check), (req, res) => {
+    this.app.post('/groups/create', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           const groupModel = new this.GroupModel(req.body)
@@ -56,7 +56,7 @@ class Groups {
    * Delete
    */
   delete () {
-    this.app.delete('/groups/delete/:id', (req, res) => {
+    this.app.delete('/groups/delete/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.GroupModel.findOneAndDelete({_id: req.params.id})
@@ -87,7 +87,7 @@ class Groups {
    * Show
    */
   show () {
-    this.app.get('/groups/show/:id', (req, res) => {
+    this.app.get('/groups/show/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.GroupModel.findOne({_id: req.params.id}).then(group => {
@@ -117,7 +117,7 @@ class Groups {
    * Update
    */
   update () {
-    this.app.put('/groups/update/:id', validator.express(check), (req, res) => {
+    this.app.put('/groups/update/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.GroupModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
@@ -149,7 +149,7 @@ class Groups {
    * List all
    */
   list () {
-    this.app.get('/groups/list', (req, res) => {
+    this.app.get('/groups/list', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.GroupModel.find({}, function (err, result) {
