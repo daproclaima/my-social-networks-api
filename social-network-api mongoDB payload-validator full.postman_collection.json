@@ -1,0 +1,1332 @@
+{
+	"info": {
+		"_postman_id": "cda3ecc3-2429-4934-8f4f-c940f009d6e1",
+		"name": "social-network-api mongoDB payload-validator full",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/events/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"omnis\",\n\t\"description\":\"quidem architecto sit\",\n\t\"start_date\":\"2019-10-23T17:12:10.596Z\",\n\t\"end_date\":\"2020-10-17T10:07:58.688Z\",\n\t\"location\":\"5915 Enzo de l'Abbaye New Lenaborough\",\n\t\"cover_picture\":\"http://lorempixel.com/640/480/nature\",\n\t\"privacy\":\"private\",\n\t\"managers\": \"Lisa Carpentier\",\n\t\"members\": \"Yanis Julien\"\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/events/create/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"create",
+						""
+					]
+				},
+				"description": "Create a new event into mockups"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/carpoolings/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"departure_location\": \"Versailles\",\n\t\"arrival_location\": \"Paris\",\n\t\"driver\": \"Sébastien\",\n\t\"seat_numbers\": 5,\n\t\"departure_hour\": \"now\", \n\t\"arrival_hour\": \"tomorrow\",\n\t\"passengers\":\"me, my sister and parents\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/carpoolings/create/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"carpoolings",
+						"create",
+						""
+					]
+				},
+				"description": "Create a new event into mockups"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/ticketings/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"event\": \"Dormir\",\n    \"ticket_collection\": 0,\n\t\"opening_date\": \"Too late\",\n\t\"closing_date\": \"When school starts off\",\n\t\"available_ticket_num\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/ticketings/create/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ticketings",
+						"create",
+						""
+					]
+				},
+				"description": "Create a new event into mockups"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/tickets/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"owner\": \"Sébastien\",\n\t\"price\": \"15 euro\",\n\t\"event\": \"Dunno\",\n\t\"purchase_date\": \"today\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/tickets/create/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tickets",
+						"create",
+						""
+					]
+				},
+				"description": "Create a new event into mockups"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/messages/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"content\": \"some text\",\n\t\"author\": \"Sébastien\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/messages/create/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						"create",
+						""
+					]
+				},
+				"description": "Create a new event into mockups"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/groups/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"odio\",\"description\":\"hic est odit\",\n\t\"cover_picture\":\"http://lorempixel.com/640/480/people\",\n\t\"icone_picture\":\"http://lorempixel.com/640/480\",\n\t\"privacy\":\"public\",\n\t\"grant_publish\":\"true\",\n\t\"grant_create_event\":\"true\",\n\t\"managers\":\"Jeanne Carpentier\",\n\t\"members\":\"Lilou Vidal\",\n\t\"events\":\"none\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/groups/create/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"create",
+						""
+					]
+				},
+				"description": "creates a survey"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/surveys/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"creator\": \"Sébastien NOBOUR\",\n    \"title_question\": \"sunt corrupti et\",\n    \"answers\": [\n        {\n            \"text\": \"id est et\"\n        },\n        {\n            \"text\": \"et aperiam dolore\"\n        },\n        {\n            \"text\": \"ab at harum\"\n        },\n        {\n            \"text\": \"ea quis dolorum\"\n        }\n    ],\n    \"participants\": [\n        \"Pierre Lemoine\",\n        \"Sarah Blanchard\",\n        \"Chloé Menard\",\n        \"Jeanne Boyer\",\n        \"Manon Fournier\",\n        \"Sacha Maillard\",\n        \"Louna Joly\",\n        \"Lou Pons\",\n        \"Zoe Petit\",\n        \"Hugo Guillaume\",\n        \"Sacha Barre\",\n        \"Mael Cousin\",\n        \"Clara Collet\",\n        \"Arthur Martinez\",\n        \"Carla Martin\",\n        \"Noa Leclerc\",\n        \"Clara Lopez\",\n        \"Alicia Nicolas\",\n        \"Louis Caron\",\n        \"Pierre Masson\",\n        \"Rayan Olivier\",\n        \"Baptiste Michel\",\n        \"Axel Giraud\",\n        \"Alexandre Richard\",\n        \"Clémence Fleury\",\n        \"Louis Marie\",\n        \"Ines Fernandez\",\n        \"Ambre Mercier\",\n        \"Quentin Philippe\",\n        \"Alexis Carpentier\",\n        \"Alicia Clement\",\n        \"Paul Robin\",\n        \"Laura Huet\",\n        \"Benjamin Schneider\",\n        \"Clément Roger\",\n        \"Elisa Dupuis\",\n        \"Ambre Paris\",\n        \"Eva Robin\",\n        \"Paul Marchal\",\n        \"Ethan Mercier\",\n        \"Camille Roux\",\n        \"Justine Colin\",\n        \"Maxime Durand\",\n        \"Jeanne Renaud\",\n        \"Sarah Morin\",\n        \"Sacha Joly\",\n        \"Carla Laine\",\n        \"Maxime Paris\",\n        \"Chloé Caron\",\n        \"Victor Deschamps\",\n        \"Benjamin Vincent\",\n        \"Célia Faure\",\n        \"Raphaël Berger\",\n        \"Noa Julien\",\n        \"Sarah Lemoine\",\n        \"Nathan Colin\",\n        \"Jeanne Nicolas\",\n        \"Elisa Poirier\",\n        \"Valentin Guerin\",\n        \"Julien Roux\",\n        \"Océane Leclerc\",\n        \"Océane Charles\",\n        \"Romane Marie\",\n        \"Mélissa Lacroix\",\n        \"Mohamed Prevost\",\n        \"Laura Thomas\",\n        \"Mattéo Collet\",\n        \"Antoine Menard\",\n        \"Maëlle Lefevre\",\n        \"Hugo Aubert\",\n        \"Clémence Dufour\",\n        \"Clémence Garnier\",\n        \"Victor Richard\",\n        \"Jade Durand\",\n        \"Léa Sanchez\",\n        \"Clément Girard\",\n        \"Louise Fontaine\",\n        \"Alexis Roger\",\n        \"Lena Chevalier\",\n        \"Lilou Poirier\",\n        \"Jules Aubert\",\n        \"Paul Robin\",\n        \"Julien Collet\",\n        \"Jules Roussel\",\n        \"Romane Le gall\",\n        \"Noa Guyot\",\n        \"Jade Gauthier\",\n        \"Justine Duval\",\n        \"Noémie Perez\",\n        \"Mélissa Picard\",\n        \"Maxence Thomas\",\n        \"Lina Rousseau\",\n        \"Adam Lambert\",\n        \"Eva Nicolas\",\n        \"Arthur Charles\",\n        \"Clara Girard\",\n        \"Maxence Durand\"\n    ],\n    \"participant_choice\": [\n        {\n            \"participant\": 0,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 1,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 2,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 3,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 4,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 5,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 6,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 7,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 8,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 9,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 10,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 11,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 12,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 13,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 14,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 15,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 16,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 17,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 18,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 19,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 20,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 21,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 22,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 23,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 24,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 25,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 26,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 27,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 28,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 29,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 30,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 31,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 32,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 33,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 34,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 35,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 36,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 37,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 38,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 39,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 40,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 41,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 42,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 43,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 44,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 45,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 46,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 47,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 48,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 49,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 50,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 51,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 52,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 53,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 54,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 55,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 56,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 57,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 58,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 59,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 60,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 61,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 62,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 63,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 64,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 65,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 66,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 67,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 68,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 69,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 70,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 71,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 72,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 73,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 74,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 75,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 76,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 77,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 78,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 79,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 80,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 81,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 82,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 83,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 84,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 85,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 86,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 87,\n            \"choice\": 3\n        },\n        {\n            \"participant\": 88,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 89,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 90,\n            \"choice\": 1\n        },\n        {\n            \"participant\": 91,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 92,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 93,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 94,\n            \"choice\": 0\n        },\n        {\n            \"participant\": 95,\n            \"choice\": 2\n        },\n        {\n            \"participant\": 96,\n            \"choice\": 1\n        }\n    ],\n    \"parent_group\": \"vitae\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/surveys/create/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"surveys",
+						"create",
+						""
+					]
+				},
+				"description": "creates a survey"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/users/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"avatar\":\"https://s3.amazonaws.com/uifaces/faces/twitter/noufalibrahim/128.jpg\",\n\t\"first_name\":\"Enzo\",\n\t\"last_name\":\"Roche\",\n\t\"email\":\"Tom.Leroy@yahoo.fr\",\n\t\"password\":\"fDkIG9LnTSnxB3P\",\n\t\"address\":\"29606 Gabriel du Faubourg Saint-Honoré\",\n\t\"city\":\"Maeltown\",\n\t\"zip_code\":\"16559\",\n\t\"country\":\"Cyprus\",\n\t\"groups\":[]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/create/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"create",
+						""
+					]
+				},
+				"description": "creates a survey"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/conversations/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"messages\": \"Almost done\",\n\t\"authors\": \"Me\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/conversations/create/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"conversations",
+						"create",
+						""
+					]
+				},
+				"description": "creates a survey"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/events/show/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/events/show/5e653df01c56175945e44538",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"show",
+						"5e653df01c56175945e44538"
+					]
+				},
+				"description": "get request on event mock ( not persisted in noSQL db)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/carpoolings/show/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/carpoolings/show/5e6579cd8fe1911317360483",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"carpoolings",
+						"show",
+						"5e6579cd8fe1911317360483"
+					]
+				},
+				"description": "get request on event mock ( not persisted in noSQL db)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/ticketings/show/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/ticketings/show/5e657d11c8b45f189dc5b58f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ticketings",
+						"show",
+						"5e657d11c8b45f189dc5b58f"
+					]
+				},
+				"description": "get request on event mock ( not persisted in noSQL db)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/tickets/show/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tickets/show/5e6580811ca7861d9f37e345",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tickets",
+						"show",
+						"5e6580811ca7861d9f37e345"
+					]
+				},
+				"description": "get request on event mock ( not persisted in noSQL db)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/messages/show/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/messages/show/5e6583a1c7486e239be5bc5c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						"show",
+						"5e6583a1c7486e239be5bc5c"
+					]
+				},
+				"description": "get request on event mock ( not persisted in noSQL db)"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/goups/show/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/groups/show/5e656689f36ef4787d676c7c",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"show",
+						"5e656689f36ef4787d676c7c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/surveys/show/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/surveys/show/5e65707937419c03469d743e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"surveys",
+						"show",
+						"5e65707937419c03469d743e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/users/show/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/show/5e6587362f01a629a588b197",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"show",
+						"5e6587362f01a629a588b197"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/conversations/show/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/conversations/show/5e658a14a6ae552eeea39590",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"conversations",
+						"show",
+						"5e658a14a6ae552eeea39590"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/events/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/events/list",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"list"
+					]
+				},
+				"description": "Shows all events from mockup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/groups/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/groups/list",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"list"
+					]
+				},
+				"description": "Shows all events from mockup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/surveys/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/surveys/list",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"surveys",
+						"list"
+					]
+				},
+				"description": "Shows all events from mockup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/carpoolings/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/carpoolings/list/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"carpoolings",
+						"list",
+						""
+					]
+				},
+				"description": "Shows all events from mockup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/ticketings/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/ticketings/list/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ticketings",
+						"list",
+						""
+					]
+				},
+				"description": "Shows all events from mockup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/tickets/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/tickets/list/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tickets",
+						"list",
+						""
+					]
+				},
+				"description": "Shows all events from mockup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/messages/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/messages/list/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						"list",
+						""
+					]
+				},
+				"description": "Shows all events from mockup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/users/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/users/list",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"list"
+					]
+				},
+				"description": "Shows all events from mockup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/conversations/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/conversations/list",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"conversations",
+						"list"
+					]
+				},
+				"description": "Shows all events from mockup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/events/update/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cover_picture\": \"http://lorempixel.com/640/480/nature\",\n    \"name\": \"une derniere encore\",\n    \"description\": \"voilà\",\n    \"start_date\": \"2019-10-23T17:12:10.596Z\",\n    \"end_date\": \"2020-10-17T10:07:58.688Z\",\n    \"location\": \"5915 Enzo de l'Abbaye New Lenaborough\",\n    \"privacy\": \"private\",\n    \"managers\": \"Moi,moi\",\n    \"members\": \"Mozinor LaBase\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/events/update/5e653df01c56175945e44538",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"update",
+						"5e653df01c56175945e44538"
+					]
+				},
+				"description": "updates one event from mockup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/groups/update/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"odio\",\n\t\"description\":\"hic est odit\",\n\t\"cover_picture\":\"http://lorempixel.com/640/480/people\",\n\t\"icone_picture\":\"http://lorempixel.com/640/480\",\n\t\"privacy\":\"public\",\n\t\"grant_publish\":\"true\",\n\t\"grant_create_event\":\"true\",\n\t\"managers\":\"Jeanne Carpentier\",\n\t\"members\":\"Lilou Vidal\",\n\t\"events\":\"none\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/groups/update/5e656689f36ef4787d676c7c",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"update",
+						"5e656689f36ef4787d676c7c"
+					]
+				},
+				"description": "updates fake surveys"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/surveys/update/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"creator\": \"Patrick Sébastien\",\n\t\"title_question\": \"Ça tourne les serviettes\",\n\t\"answers\": [ \n\t  {\"text\": \"Oui\"},\n\t  {\"text\": \"Non\"},\n\t  {\"text\": \"La mienne est en panne\"}, \n\t  {\"text\": \"Carré dans l'angle\"}\n\t], \n\t\"participants\": [\n\t  \"les sardines, Les petits bonhomes en mousse\" \n\t], \n\t\"participant_choice\": [\n\t  {\"participant\": 8, \"choice\": 0}\n\t], \n\t\"parent_group\": \"est\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/surveys/update/5e65707937419c03469d743e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"surveys",
+						"update",
+						"5e65707937419c03469d743e"
+					]
+				},
+				"description": "updates fake surveys"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/carpoolings/update/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"departure_location\": \"Marseilles\",\n    \"arrival_location\": \"Nice\",\n    \"driver\": \"Matthieu\",\n    \"seat_numbers\": 3,\n    \"departure_hour\": \"demain\",\n    \"arrival_hour\": \"tomorrow night\",\n    \"passengers\": \"his fam\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/carpoolings/update/5e658e5441bc74364a21493a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"carpoolings",
+						"update",
+						"5e658e5441bc74364a21493a"
+					]
+				},
+				"description": "updates fake surveys"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/ticketings/update/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"event\": \"Manger\",\n    \"ticket_collection\": \"2\",\n    \"opening_date\": \"Too late\",\n    \"closing_date\": \"When school starts off\",\n    \"available_ticket_num\": \"0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/ticketings/update/5e657d11c8b45f189dc5b58f",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ticketings",
+						"update",
+						"5e657d11c8b45f189dc5b58f"
+					]
+				},
+				"description": "updates fake surveys"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/messages/update/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"Whole complain again\",\n    \"author\": \"Not me\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/messages/update/5e6583a1c7486e239be5bc5c",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						"update",
+						"5e6583a1c7486e239be5bc5c"
+					]
+				},
+				"description": "updates fake surveys"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/tickets/update/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"owner\": \"Séb\",\n    \"price\": \"1 euro\",\n    \"event\": \"Dunno\",\n    \"purchase_date\": \"today\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/tickets/update/5e6580811ca7861d9f37e345",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tickets",
+						"update",
+						"5e6580811ca7861d9f37e345"
+					]
+				},
+				"description": "updates fake surveys"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/users/update/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/noufalibrahim/128.jpg\",\n    \"first_name\": \"Sébastien\",\n    \"last_name\": \"NOBOUR\",\n    \"email\": \"haanoon@yahoo.fr\",\n    \"password\": \"fDkIG9LnTSnxB3P\",\n    \"address\": \"29606 Gabriel du Faubourg Saint-Honoré\",\n    \"city\": \"Maeltown\",\n    \"zip_code\": \"16559\",\n    \"country\": \"Cyprus\",\n    \"groups\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/update/5e6587362f01a629a588b197",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"update",
+						"5e6587362f01a629a588b197"
+					]
+				},
+				"description": "updates fake surveys"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/conversations/update/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"messages\": \"content here\",\n\t\"authors\": \"me\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/conversations/update/5e658ade92419f30333959b3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"conversations",
+						"update",
+						"5e658ade92419f30333959b3"
+					]
+				},
+				"description": "updates fake surveys"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/events/delete/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/events/delete/5e653b73faad33553dee17ab",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"delete",
+						"5e653b73faad33553dee17ab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/messages/delete/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/messages/delete/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						"delete",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/surveys/delete/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/surveys/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"surveys",
+						"delete",
+						"1"
+					]
+				},
+				"description": "Deletes fake survey"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/groups/delete/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/groups/delete/5e656686f36ef4787d676c7b",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"delete",
+						"5e656686f36ef4787d676c7b"
+					]
+				},
+				"description": "Deletes fake survey"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/ticketings/delete/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/ticketings/delete/5e657d13c8b45f189dc5b590",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ticketings",
+						"delete",
+						"5e657d13c8b45f189dc5b590"
+					]
+				},
+				"description": "Deletes fake survey"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/tickets/delete/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/tickets/delete/5e65808d1ca7861d9f37e346",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tickets",
+						"delete",
+						"5e65808d1ca7861d9f37e346"
+					]
+				},
+				"description": "Deletes fake survey"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/carpoolings/delete/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/carpoolings/delete/5e6579cd8fe1911317360483",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"carpoolings",
+						"delete",
+						"5e6579cd8fe1911317360483"
+					]
+				},
+				"description": "Deletes fake survey"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/users/delete/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/users/delete/5e6587582f01a629a588b198",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"delete",
+						"5e6587582f01a629a588b198"
+					]
+				},
+				"description": "Deletes fake survey"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/conversations/delete/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/conversations/delete/5e658ade92419f30333959b4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"conversations",
+						"delete",
+						"5e658ade92419f30333959b4"
+					]
+				},
+				"description": "Deletes fake survey"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
