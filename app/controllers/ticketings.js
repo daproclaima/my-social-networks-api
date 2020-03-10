@@ -55,7 +55,7 @@ class Ticketings {
    * Delete
    */
   delete () {
-    this.app.delete('/ticketings/delete/:id', (req, res) => {
+    this.app.delete('/ticketings/delete/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.TickModel.findOneAndDelete({_id: req.params.id})
@@ -86,7 +86,7 @@ class Ticketings {
    * Show
    */
   show () {
-    this.app.get('/ticketings/show/:id', (req, res) => {
+    this.app.get('/ticketings/show/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.TickModel.findOne({_id: req.params.id}).then(result => {
@@ -116,7 +116,7 @@ class Ticketings {
    * Update
    */
   update () {
-    this.app.put('/ticketings/update/:id', validator.express(check), (req, res) => {
+    this.app.put('/ticketings/update/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.TickModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
@@ -148,7 +148,7 @@ class Ticketings {
    * List all
    */
   list () {
-    this.app.get('/ticketings/list', (req, res) => {
+    this.app.get('/ticketings/list', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.TickModel.find({}, function (err, result) {

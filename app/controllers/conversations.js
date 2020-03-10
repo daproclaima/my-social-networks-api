@@ -24,7 +24,7 @@ class Conversations {
    * Create
    */
   create () {
-    this.app.post('/conversations/create', validator.express(check), (req, res) => {
+    this.app.post('/conversations/create', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           const oModel = new this.OModel(req.body)
@@ -149,7 +149,7 @@ class Conversations {
    * List all
    */
   list () {
-    this.app.get('/conversations/list', (req, res) => {
+    this.app.get('/conversations/list', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.OModel.find({}, function (err, result) {

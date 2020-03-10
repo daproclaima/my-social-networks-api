@@ -24,7 +24,7 @@ class Carpoolings {
    * Create
    */
   create () {
-    this.app.post('/carpoolings/create', validator.express(check), (req, res) => {
+    this.app.post('/carpoolings/create', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           const carpModel = new this.CarpModel(req.body)
@@ -56,7 +56,7 @@ class Carpoolings {
    * Delete
    */
   delete () {
-    this.app.delete('/carpoolings/delete/:id', (req, res) => {
+    this.app.delete('/carpoolings/delete/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.CarpModel.findOneAndDelete({_id: req.params.id})
@@ -87,7 +87,7 @@ class Carpoolings {
    * Show
    */
   show () {
-    this.app.get('/carpoolings/show/:id', (req, res) => {
+    this.app.get('/carpoolings/show/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.CarpModel.findOne({_id: req.params.id}).then(result => {
@@ -117,7 +117,7 @@ class Carpoolings {
    * Update
    */
   update () {
-    this.app.put('/carpoolings/update/:id', validator.express(check), (req, res) => {
+    this.app.put('/carpoolings/update/:id', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.CarpModel.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, {new: true}, (err, doc) => {
@@ -149,7 +149,7 @@ class Carpoolings {
    * List all
    */
   list () {
-    this.app.get('/carpoolings/list', (req, res) => {
+    this.app.get('/carpoolings/list', validator.express(check), async (req, res) => {
       try {
         if (jwt.getToken(req.body.token)) {
           this.CarpModel.find({}, function (err, result) {

@@ -9,12 +9,13 @@ const cors = require('cors')
  * @Class
  */
 class Server {
-  constructor () {
+  constructor (dbHost) {
+    this.dbHost = dbHost
     this.app = express()
   }
 
   dbConnect () {
-    const host = 'mongodb://localhost:27017/my-social-network-api'
+    const host = this.dbHost !== undefined && this.dbHost !== null && this.dbHost !== '' ? this.dbHost : 'mongodb://localhost:27017/my-social-network-api'
     const connect = mongoose.createConnection(host)
 
     connect.on('error', (err) => {
