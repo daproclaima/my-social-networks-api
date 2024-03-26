@@ -24,7 +24,7 @@
     "compression": "1.7.2",
     "cors": "^2.8.4",
     "crypto-js": "^4.0.0",
-    "express": "4.16.3",
+    "express": "4.19.2",
     "global": "^4.4.0",
     "helmet": "3.12.1",
     "mongoose": "5.1.4",
